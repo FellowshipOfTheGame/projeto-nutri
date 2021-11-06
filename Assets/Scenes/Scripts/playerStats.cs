@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class playerStats : MonoBehaviour
 {
-    private static int points;
-    private static int barPoint;
-    private static int multPoint;
+    private int points;
+    private int barPoint;
+    private int multPoint;
 
     /*public int Points
     {
@@ -28,7 +28,6 @@ public class playerStats : MonoBehaviour
         set => multPoint = value;
     }*/
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +42,7 @@ public class playerStats : MonoBehaviour
         
     }
 
-    public static void AddPoint() // Adds points accordingly to the mult value
+    public void AddPoint() // Adds points accordingly to the mult value
     {
         points += multPoint;
         barPoint++;
@@ -59,13 +58,13 @@ public class playerStats : MonoBehaviour
         }
     }
 
-    public static void ResetStreak()
+    public void ResetStreak()
     {
         barPoint = 0;
         multPoint = 1;
     }
 
-    public static void SoftReset() //for tests only
+    public void SoftReset() //for tests only
     {
         barPoint = 0;
     }
