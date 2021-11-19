@@ -104,6 +104,7 @@ public class FoodLauncher : MonoBehaviour
         randy = Random.Range(0,numSubCannons);
         
         Debug.Log("randy = " + randy);
+        /* Choose what cannon to do the shooting*/
         switch(rand)
         {
             case 0:

@@ -6,9 +6,22 @@ using UnityEngine;
 
 public class playerStats : MonoBehaviour
 {
-    private int points;
-    private int barPoint;
-    private int multPoint;
+    private static int points = 0;
+    private static int barPoint;
+    private static int multPoint;
+
+    public int GetPoints()
+    {
+        return points;
+    }
+    public int GetBarPoint()
+    {
+        return barPoint;
+    }
+    public int GetMultPoint()
+    {
+        return multPoint;
+    }
 
     /*public int Points
     {
@@ -31,9 +44,7 @@ public class playerStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        points = 0;
-        barPoint = 0;
-        multPoint = 1;
+        ResetStreak();
     }
 
     // Update is called once per frame
@@ -42,11 +53,11 @@ public class playerStats : MonoBehaviour
         
     }
 
-    public void AddPoint() // Adds points accordingly to the mult value
+    public static void AddPoint() // Adds points accordingly to the mult value
     {
         points += multPoint;
         barPoint++;
-        if (barPoint > 8)
+        if (barPoint > 2)
         {
             multPoint++;
             if (multPoint <= 4)
@@ -58,13 +69,13 @@ public class playerStats : MonoBehaviour
         }
     }
 
-    public void ResetStreak()
+    public static void ResetStreak()
     {
         barPoint = 0;
         multPoint = 1;
     }
 
-    public void SoftReset() //for tests only
+    public static void SoftReset() //for tests only
     {
         barPoint = 0;
     }
