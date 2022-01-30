@@ -38,7 +38,6 @@ public class SubCannonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Invoke("Shoot",shooTime);
     }
 
   public void Shoot(int dif)

@@ -14,7 +14,7 @@ public class StreakText : MonoBehaviour
     {
         goPlayer = GameObject.Find("Player");
         scoreText = gameObject.GetComponent<Text>();
-        teste = goPlayer.GetComponent<playerStats>(); 
+        teste = goPlayer.GetComponent<playerStats>();
     }
 
     // Update is called once per frame

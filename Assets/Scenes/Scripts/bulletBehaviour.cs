@@ -8,6 +8,9 @@ using UnityEngine;
 
 public class bulletBehaviour : MonoBehaviour
 {
+    [SerializeField]
+    float lifetime;
+
     Rigidbody2D bulletRB;
 
     [SerializeField]
@@ -32,7 +35,11 @@ public class bulletBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        lifetime -= Time.deltaTime;
+        if(lifetime < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate()
@@ -46,18 +53,20 @@ public class bulletBehaviour : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("OK!!!!!");
+            /* Detects which type of food we will get*/
             switch(foodType)
             {
                 case FoodTypeNum.InNatura:
                     playerStats.AddPoint();
+                    //playerStats.SetKartLevel(playerStats.GetKartLevel() + 1);
                 break;
 
                 case FoodTypeNum.Processed:
-                    playerStats.ResetStreak();
+                    playerStats.SoftReset();
                 break;
 
                 case FoodTypeNum.Ultra:
-                    playerStats.SoftReset();
+                    playerStats.ResetStreak();
                 break;
 
                 default:

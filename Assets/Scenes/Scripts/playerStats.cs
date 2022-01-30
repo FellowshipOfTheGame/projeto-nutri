@@ -1,4 +1,3 @@
-using System;
 using System.Drawing;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +5,11 @@ using UnityEngine;
 
 public class playerStats : MonoBehaviour
 {
+ 
+    private static int kartLevel;
+    
+    public bool hasKart;
+
     private static int points = 0;
     private static int barPoint;
     private static int multPoint;
@@ -21,6 +25,14 @@ public class playerStats : MonoBehaviour
     public int GetMultPoint()
     {
         return multPoint;
+    }
+    public  void SetKartLevel(int newLevel)
+    {
+        kartLevel = newLevel;
+    }
+    public  int GetKartLevel()
+    {
+        return kartLevel;
     }
 
     /*public int Points
@@ -41,23 +53,30 @@ public class playerStats : MonoBehaviour
         set => multPoint = value;
     }*/
 
-    // Start is called before the first frame update
+    public int auxKartLevel;
+
     void Start()
     {
+        kartLevel = 0;
+        hasKart = false;
         ResetStreak();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("KL: " + kartLevel);
+        Debug.Log("Has Kart = " + hasKart);
     }
 
     public static void AddPoint() // Adds points accordingly to the mult value
     {
         points += multPoint;
         barPoint++;
-        if (barPoint > 2)
+        kartLevel++;
+        kartLevel = Mathf.Clamp(kartLevel,0,8);
+        /* */
+        if (barPoint > 8) 
         {
             multPoint++;
             if (multPoint <= 4)
@@ -69,13 +88,13 @@ public class playerStats : MonoBehaviour
         }
     }
 
-    public static void ResetStreak()
+    public static void ResetStreak() //Streak becomes as the same as initial state
     {
         barPoint = 0;
         multPoint = 1;
     }
 
-    public static void SoftReset() //for tests only
+    public static void SoftReset() //Just the bar point got reseted
     {
         barPoint = 0;
     }

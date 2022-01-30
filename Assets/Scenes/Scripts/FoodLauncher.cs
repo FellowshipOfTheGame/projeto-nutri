@@ -5,6 +5,21 @@ using UnityEngine;
 
 public class FoodLauncher : MonoBehaviour
 {
+
+    /* Stage customization*/
+    [SerializeField]
+    float[] stageTiming = new float[3]; // Need to make customizable sizes
+    [SerializeField]
+    int[] stageDif = new int[3];
+    int actualStage;
+    [SerializeField]
+    int numFases;
+    [SerializeField]
+    float timing;
+
+
+
+
     int i; // C old habits
 
     public Camera cam;
@@ -34,8 +49,9 @@ public class FoodLauncher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        actualStage = 0; // MUST start at zero
 
-        difAux = 1.0f/((float)dif * 2.0f); //Temporary, have to find a function that optmizes the rate according to the difficulty in terms of level design
+        difAux = 10.0f/((float)dif * 3.5f); //Temporary, have to find a function that optmizes the rate according to the difficulty in terms of level design
 
         /* Down bellow are some adjustments for transformation if the camera is moved*/
         /* Screen Resolution.*/
@@ -93,9 +109,16 @@ public class FoodLauncher : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        //Debug.Log("difAux: "+difAux);
+        /* Difficulty changes if player spend too much time on a screen*/
+        timing -= Time.deltaTime;
+        if (timing < 0 && actualStage < numFases - 1)
+        {
+            actualStage++;
+            timing = stageTiming[actualStage];
+            dif = stageDif[actualStage];
+        }
     }
 
     void CallForShooting()
@@ -103,7 +126,7 @@ public class FoodLauncher : MonoBehaviour
         rand = Random.Range(0,4);
         randy = Random.Range(0,numSubCannons);
         
-        Debug.Log("randy = " + randy);
+        //Debug.Log("randy = " + randy);
         /* Choose what cannon to do the shooting*/
         switch(rand)
         {

@@ -144,4 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 231a0c985505de99ab2a4691ea608cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 5
+  lifetime: 15
+  bulletSpeed: 2
+  foodType: 0
