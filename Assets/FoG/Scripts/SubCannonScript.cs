@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SubCannonScript : MonoBehaviour
 {
+
+
     public int difficulty;
     public float vel;
     public float shooTime;
@@ -15,9 +17,15 @@ public class SubCannonScript : MonoBehaviour
     public Transform firepoint;
     GameObject FP;
 
-    public GameObject badFood;
-    public GameObject neutralFood;
-    public GameObject goodFood;
+    public GameObject food;
+    public bulletBehaviour BB;
+
+    public enum FoodTypeNum
+    {
+        InNatura,
+        Processed,
+        Ultra
+    };
 
     public int canShoot;
     public Vector3 altVector;
@@ -33,6 +41,8 @@ public class SubCannonScript : MonoBehaviour
         shooTime = 11.0f - (float)difficulty; // Probably useless
 
         canShoot = 1;
+
+        BB = food.GetComponent<bulletBehaviour>();
     }
 
     // Update is called once per frame
@@ -51,11 +61,11 @@ public class SubCannonScript : MonoBehaviour
         }
         if(dif >= 4 && dif <= 7)
         {
-            auxDif = 30;
+            auxDif = 50;
         }
         else
         {  
-            auxDif = 60;
+            auxDif = 90;
         }
         
         /* Other randoms. One for deciding if it's  a goodie or a baddie food
@@ -66,21 +76,25 @@ public class SubCannonScript : MonoBehaviour
         float varY = Random.Range(-yLimit,yLimit);
 
         altVector = new Vector3(firepoint.position.x + varX, firepoint.position.y + varY, firepoint.position.z);
+        Instantiate(food, altVector, firepoint.rotation);
 
         if (takingChances <= auxDif) //Neutral or bad item
         {
             if(takingChances%2 == 0)
             {
-                Instantiate(badFood, altVector, firepoint.rotation);
+                //Instantiate(badFood, altVector, firepoint.rotation);
+                BB.SetType(bulletBehaviour.FoodTypeNum.Ultra);
             }
             else
             {
-                Instantiate(neutralFood, altVector, firepoint.rotation);
+                //Instantiate(neutralFood, altVector, firepoint.rotation);
+                BB.SetType(bulletBehaviour.FoodTypeNum.Processed);
             }
         }
         else
         {
-            Instantiate(goodFood, firepoint.position, firepoint.rotation);
+            //Instantiate(goodFood, firepoint.position, firepoint.rotation);
+            BB.SetType(bulletBehaviour.FoodTypeNum.InNatura);
         }
     }
 

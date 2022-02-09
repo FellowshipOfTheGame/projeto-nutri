@@ -51,9 +51,8 @@ MonoBehaviour:
   xLimit: 0
   yLimit: 0
   firepoint: {fileID: 0}
-  badFood: {fileID: 3034496717247358417, guid: 0b2df13b580e9af68a9a55c3ce5f112b, type: 3}
-  neutralFood: {fileID: 3867953594272112372, guid: 21f183f75349f674c8181b4501a285d7, type: 3}
-  goodFood: {fileID: 1613187652234925409, guid: e40095dc45be89964920bf286581b071, type: 3}
+  food: {fileID: 1613187652234925409, guid: e40095dc45be89964920bf286581b071, type: 3}
+  BB: {fileID: 0}
   canShoot: 0
   altVector: {x: 0, y: 0, z: 0}
 --- !u!212 &-6304555407719834117

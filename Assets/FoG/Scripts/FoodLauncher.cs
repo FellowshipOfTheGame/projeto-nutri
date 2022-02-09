@@ -27,6 +27,9 @@ public class FoodLauncher : MonoBehaviour
     [Range(1, 10)]
     public int dif;
 
+    [Range(0f, 10f)]
+    public float difMagicalNumber;
+
     [SerializeField]
     public int numSubCannons;
 
@@ -51,7 +54,7 @@ public class FoodLauncher : MonoBehaviour
     {
         actualStage = 0; // MUST start at zero
 
-        difAux = 10.0f/((float)dif * 3.5f); //Temporary, have to find a function that optmizes the rate according to the difficulty in terms of level design
+        difAux = difMagicalNumber/(float)dif; //Temporary, have to find a function that optmizes the rate according to the difficulty in terms of level design
 
         /* Down bellow are some adjustments for transformation if the camera is moved*/
         /* Screen Resolution.*/
@@ -104,7 +107,7 @@ public class FoodLauncher : MonoBehaviour
             rCannon[i].GetComponent<SubCannonScript>().setYLimit( (heiRes/((float)numSubCannons * 2.0f) ) );
 
         }
-        InvokeRepeating("CallForShooting",difAux,difAux);
+        InvokeRepeating("CallForShooting",1.0f,difAux);
 
     }
 
@@ -118,6 +121,11 @@ public class FoodLauncher : MonoBehaviour
             actualStage++;
             timing = stageTiming[actualStage];
             dif = stageDif[actualStage];
+            /* Trying to update the difficulty*/
+            CancelInvoke();
+            difAux = difMagicalNumber/((float)dif);
+            InvokeRepeating("CallForShooting",1.0f,difAux);
+            Debug.Log("Dif atual: "+ dif);
         }
     }
 
