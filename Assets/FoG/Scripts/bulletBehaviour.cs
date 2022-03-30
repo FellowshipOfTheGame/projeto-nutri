@@ -23,8 +23,6 @@ public class bulletBehaviour : MonoBehaviour
     int auxIndex;
     SpriteRenderer spriterenderer;
 
-
-
     [SerializeField]
     float lifetime;
 
@@ -35,7 +33,6 @@ public class bulletBehaviour : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     FoodTypeNum foodType;
-
    public enum FoodTypeNum
     {
         InNatura,
@@ -101,31 +98,34 @@ public class bulletBehaviour : MonoBehaviour
             {
                 case FoodTypeNum.InNatura:
                     playerStats.AddPoint();
+                    playerStats.AddFoodToKart(0);
                 break;
 
                 case FoodTypeNum.Processed:
                     playerStats.SoftReset();
+                    playerStats.AddFoodToKart(1);
                 break;
 
                 case FoodTypeNum.Ultra:
                     playerStats.ResetStreak();
+                    playerStats.AddFoodToKart(1);
                 break;
 
                 default:
                     Debug.Log("Food Not found");
                 break;
             }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
-    void ChangeSprite(Sprite selectSprite, SpriteRenderer srender)
+    void ChangeSprite(Sprite selectSprite, SpriteRenderer srender) // Selects a Sprite and renders it
     {
         srender.sprite = selectSprite;
     }
 
 
-    public void SetType(FoodTypeNum typeFoodSet)
+    public void SetType(FoodTypeNum typeFoodSet) // Good or bad food, you decide
     {
         foodType = typeFoodSet;
     }

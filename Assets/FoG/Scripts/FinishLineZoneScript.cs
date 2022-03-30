@@ -22,7 +22,7 @@ public class FinishLineZoneScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player")
+        /*if (other.gameObject.tag == "Player")
         {
             Debug.Log("OK - Player + Finish Zone");
             gpKart = goPlayer.GetComponent<playerStats>().hasKart;
@@ -32,7 +32,7 @@ public class FinishLineZoneScript : MonoBehaviour
                 goPlayer.GetComponent<playerStats>().hasKart = false;
                 goPlayer.GetComponent<playerStats>().SetKartLevel(0);
             }
-        }
+        }*/
     }
 
 

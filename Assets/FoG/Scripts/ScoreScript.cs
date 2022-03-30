@@ -9,6 +9,7 @@ public class ScoreScript : MonoBehaviour
     public Text scoreText;
     public Text streakText;
     public Text multiplierText;
+    public Text carState;
     public GameObject goPlayer;
     public playerStats playerstats;
     // Start is called before the first frame update
@@ -24,5 +25,6 @@ public class ScoreScript : MonoBehaviour
         scoreText.text = playerstats.GetPoints().ToString();
         streakText.text = playerstats.GetBarPoint().ToString();
         multiplierText.text = playerstats.GetMultPoint().ToString();
+        carState.text = playerstats.GetKartState().ToString();
     }
 }

@@ -15,9 +15,10 @@ public class KartScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         kart = goPlayer.GetComponent<playerStats>().hasKart;
         Debug.Log("KART TEST == " + kart);
          // Too expensive. Have to fix this
-        gameObject.SetActive(kart);
+        gameObject.SetActive(kart);*/
     }
 }
