@@ -45,7 +45,7 @@ public class playerStats : MonoBehaviour
     void Start()
     {
         kartLevel = 0;
-        hasKart = false; //Debug purposes. I'll change it later -- Nevermind
+        hasKart = true; //Debug purposes. I'll change it later -- Nevermind
         ResetStreak();
     }
 
@@ -54,10 +54,10 @@ public class playerStats : MonoBehaviour
     {
         Debug.Log("KL: " + kartLevel);
         Debug.Log("Has Kart = " + hasKart);
-        if (kartLevel >= maxKartLevel)
+        /*if (kartLevel >= maxKartLevel)
         {
             SpawnBeetle();
-        }
+        }*/
     }
 
     public static void AddPoint() // Adds points accordingly to the mult value
@@ -132,14 +132,14 @@ public class playerStats : MonoBehaviour
                 /* Summing up: It's all a reset*/
                 SetKartLevel(0);
                 hasKart = true;
-                float percentageOnKart = ((float)GFOK)/((float)FOK); 
+                float percentageOnKart = ((float)GFOK)/((float)FOK) * 100; 
                 Debug.Log("Percentage: " + percentageOnKart);
                 points += multPoint * (int)percentageOnKart; // Jankie code, but it was what worked for this
                 GFOK = 0;
                 FOK = 0;
                 kartLevel = 0;
                 Debug.Log("Carrinho colocado");
-                Destroy(fuscao);
+                //Destroy(fuscao);
             }
         }
     }
