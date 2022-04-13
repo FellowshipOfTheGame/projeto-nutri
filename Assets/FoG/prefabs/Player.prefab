@@ -72,8 +72,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerVelocity: 6.67
-  animator: {fileID: 4961712355190303504}
+  playerAnimator: {fileID: 4961712355190303504}
   walkingAnimatorName: IsWalking
+  kartAnimator: {fileID: 5461390157205155964}
+  kartFoodAnimatorName: FoodLevel
 --- !u!114 &8093303445275020589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finishLine: {fileID: 0}
+  maxKartLevel: 24
 --- !u!61 &1900699448
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -290,6 +293,11 @@ PrefabInstance:
 --- !u!4 &7535782517787519969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8431922257103522193, guid: f749206d6d5006e4293f96c5eea37534, type: 3}
+  m_PrefabInstance: {fileID: 2130289314726109808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5461390157205155964 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6222443829246054924, guid: f749206d6d5006e4293f96c5eea37534, type: 3}
   m_PrefabInstance: {fileID: 2130289314726109808}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3142381950779867694

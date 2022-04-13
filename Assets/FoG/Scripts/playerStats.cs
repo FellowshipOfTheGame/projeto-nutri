@@ -4,16 +4,20 @@ public class playerStats : MonoBehaviour
 {
     [SerializeField] FinishLineZoneScript finishLine;
 
-    private static int kartLevel;
-    public static bool hasKart;
-    private static int points = 0;
-    private static int barPoint;
-    private static int multPoint;
+    int kartLevel;
+    bool hasKart;
+    int points = 0;
+    int barPoint;
+    int multPoint;
 
-    public static int maxKartLevel = 4;
+    public int maxKartLevel = 24;
 
-    public static int GFOK = 0; //Good food on kart
-    public static int FOK = 0; //Food on Kart
+    int GFOK = 0; //Good food on kart
+    int FOK = 0; //Food on Kart
+
+    int currentFoodLevel = 0;
+
+    PewController playerController;
 
     public int GetPoints()
     {
@@ -41,6 +45,7 @@ public class playerStats : MonoBehaviour
         kartLevel = 0;
         hasKart = true; //Debug purposes. I'll change it later -- Nevermind
         ResetStreak();
+        playerController = GetComponent<PewController>();
     }
 
     // Update is called once per frame
@@ -48,20 +53,14 @@ public class playerStats : MonoBehaviour
     {
         //Debug.Log("KL: " + kartLevel);
         //Debug.Log("Has Kart = " + hasKart);
-        if (kartLevel >= maxKartLevel)
-        {
-            OpenHood();
-        }
     }
 
-    public static void AddPoint() // Adds points accordingly to the mult value
+    public void AddPoint() // Adds points accordingly to the mult value
     {
         if (hasKart)
         {
             points += multPoint;
             barPoint++;
-            kartLevel++;
-            kartLevel = Mathf.Clamp(kartLevel,0,maxKartLevel);
             if (barPoint > 8) // Magic number bro
             {
                 multPoint++;
@@ -76,24 +75,38 @@ public class playerStats : MonoBehaviour
         }
     }
 
-    public static void ResetStreak() //Streak becomes as the same as initial state
+    public void ResetStreak() //Streak becomes as the same as initial state
     {
         barPoint = 0;
         multPoint = 1;
     }
 
-    public static void SoftReset() //Just the bar point got reseted
+    public void SoftReset() //Just the bar point got reseted
     {
         barPoint = 0;
     }
 
-    public static void AddFoodToKart(bulletBehaviour.FoodTypeNum type) // Had to transform the whole operation in a function
+    public void AddFoodToKart(bulletBehaviour.FoodTypeNum type) // Had to transform the whole operation in a function
     {
         Debug.Log("Added FOOD");
         FOK++;
         if (type == bulletBehaviour.FoodTypeNum.InNatura)
         {
             GFOK++;
+        }
+        
+        kartLevel++;
+        if (kartLevel == maxKartLevel)
+        {
+            OpenHood();
+        }
+
+        float foodLevel = FOK / (float) maxKartLevel;
+        int expectedLevel = (int) Mathf.Min(foodLevel * 2, 2);
+        if (expectedLevel >= currentFoodLevel)
+        {
+            currentFoodLevel = expectedLevel;
+            playerController.UpdateKartFoodLevel(currentFoodLevel);
         }
     }
 
@@ -146,5 +159,7 @@ public class playerStats : MonoBehaviour
     void CloseHood()
     {
         finishLine.CloseHood();
+        currentFoodLevel = 0;
+        playerController.UpdateKartFoodLevel(currentFoodLevel);
     }
 }

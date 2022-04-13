@@ -74,23 +74,24 @@ public class bulletBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("OK!!!!!");
+            playerStats stats = other.gameObject.GetComponent<playerStats>();
+            
             /* Detects which type of food we will get*/
             switch(foodType)
             {
                 case FoodTypeNum.InNatura:
-                    playerStats.AddPoint();
-                    playerStats.AddFoodToKart(foodType);
+                    stats.AddPoint();
+                    stats.AddFoodToKart(foodType);
                 break;
 
                 case FoodTypeNum.Processed:
-                    playerStats.SoftReset();
-                    playerStats.AddFoodToKart(foodType);
+                    stats.SoftReset();
+                    stats.AddFoodToKart(foodType);
                 break;
 
                 case FoodTypeNum.Ultra:
-                    playerStats.ResetStreak();
-                    playerStats.AddFoodToKart(foodType);
+                    stats.ResetStreak();
+                    stats.AddFoodToKart(foodType);
                 break;
 
                 default:

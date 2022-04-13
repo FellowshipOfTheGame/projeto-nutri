@@ -10,11 +10,11 @@ public class PewController : MonoBehaviour
     [SerializeField]
     public float playerVelocity;
 
-    [SerializeField]
-    private Animator animator;
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private string walkingAnimatorName = "IsWalking";
 
-    [SerializeField]
-    private string walkingAnimatorName = "IsWalking";
+    [SerializeField] private Animator kartAnimator;
+    [SerializeField] private string kartFoodAnimatorName = "FoodLevel";
 
     private PlayerControl playerControl;
     private Rigidbody2D rb;
@@ -53,7 +53,7 @@ public class PewController : MonoBehaviour
 
         if (moveInput.magnitude > 0)
         {
-            animator.SetBool(walkingAnimatorName, true);
+            playerAnimator.SetBool(walkingAnimatorName, true);
             rb.velocity = moveInput * playerVelocity;
 
             if (moveInput.x > 0 && !isFlipped)
@@ -67,7 +67,7 @@ public class PewController : MonoBehaviour
         }
         else
         {
-            animator.SetBool(walkingAnimatorName, false);
+            playerAnimator.SetBool(walkingAnimatorName, false);
             rb.velocity = Vector2.zero;
         }
     }
@@ -78,5 +78,10 @@ public class PewController : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    public void UpdateKartFoodLevel(int foodLevel)
+    {
+        kartAnimator.SetInteger(kartFoodAnimatorName, foodLevel);
     }
 }
