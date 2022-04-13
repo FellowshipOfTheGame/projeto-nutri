@@ -1,6 +1,3 @@
-using System.Net.Mime;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +22,7 @@ public class ScoreScript : MonoBehaviour
         scoreText.text = playerstats.GetPoints().ToString();
         streakText.text = playerstats.GetBarPoint().ToString();
         multiplierText.text = playerstats.GetMultPoint().ToString();
-        carState.text = playerstats.GetKartState().ToString();
+        if(carState != null)
+            carState.text = playerstats.GetKartState().ToString();
     }
 }

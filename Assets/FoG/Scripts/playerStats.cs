@@ -1,12 +1,8 @@
-using System.Drawing;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class playerStats : MonoBehaviour
 {
- 
-    public GameObject fuscao;
+    [SerializeField] FinishLineZoneScript finishLine;
 
     private static int kartLevel;
     public static bool hasKart;
@@ -40,8 +36,6 @@ public class playerStats : MonoBehaviour
         return kartLevel;
     }
 
-    public int auxKartLevel;
-
     void Start()
     {
         kartLevel = 0;
@@ -52,12 +46,12 @@ public class playerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("KL: " + kartLevel);
-        Debug.Log("Has Kart = " + hasKart);
-        /*if (kartLevel >= maxKartLevel)
+        //Debug.Log("KL: " + kartLevel);
+        //Debug.Log("Has Kart = " + hasKart);
+        if (kartLevel >= maxKartLevel)
         {
-            SpawnBeetle();
-        }*/
+            OpenHood();
+        }
     }
 
     public static void AddPoint() // Adds points accordingly to the mult value
@@ -93,11 +87,11 @@ public class playerStats : MonoBehaviour
         barPoint = 0;
     }
 
-    public static void AddFoodToKart(int fType) // Had to transform the whole operation in a function
+    public static void AddFoodToKart(bulletBehaviour.FoodTypeNum type) // Had to transform the whole operation in a function
     {
         Debug.Log("Added FOOD");
         FOK++;
-        if (fType == 0)
+        if (type == bulletBehaviour.FoodTypeNum.InNatura)
         {
             GFOK++;
         }
@@ -139,13 +133,18 @@ public class playerStats : MonoBehaviour
                 FOK = 0;
                 kartLevel = 0;
                 Debug.Log("Carrinho colocado");
-                //Destroy(fuscao);
+                CloseHood();
             }
         }
     }
 
-    void SpawnBeetle()
+    void OpenHood()
     {
-        Instantiate(fuscao, new Vector3 (0,0,0) , Quaternion.identity);
+        finishLine.OpenHood();
+    }
+
+    void CloseHood()
+    {
+        finishLine.CloseHood();
     }
 }

@@ -1,7 +1,46 @@
 fileFormatVersion: 2
-guid: 8b29f35015caff443b1781f2ce309365
+guid: 1fdb22d269c579f42998bfa09afad1ee
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6755920284957253136
+    second: fuscaFechadoAzul
+  - first:
+      213: 7373968700218059736
+    second: kombiBranca
+  - first:
+      213: -3373186794761607210
+    second: barracaMiscAzul
+  - first:
+      213: 330417822803746846
+    second: barraquinhaVerticalAmarela
+  - first:
+      213: -5848472204993813980
+    second: barracaFrutasVerde
+  - first:
+      213: 6968675224146055243
+    second: caminhaoVermelho
+  - first:
+      213: 6590803059472324112
+    second: sceneObjects_6
+  - first:
+      213: 5135687525745863669
+    second: barracaLegumesVerde
+  - first:
+      213: 8317084235502724115
+    second: barracaCarnesVermelha
+  - first:
+      213: -5020142713125290993
+    second: trailerBranco
+  - first:
+      213: -8231886696607688395
+    second: tendaAmarela
+  - first:
+      213: 4973197144629370945
+    second: arvorePrimavera
+  - first:
+      213: -938377740928347697
+    second: fuscaAbertoAzul
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +80,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -80,7 +119,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -89,7 +128,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fuscaFechadoAzul
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2590
+        width: 620
+        height: 370
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e9bbb64b9d1cd50800000000000000
+      internalID: 6755920284957253136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kombiBranca
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 2570
+        width: 639
+        height: 481
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dba851c679955660800000000000000
+      internalID: 7373968700218059736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barracaMiscAzul
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 2529
+        width: 765
+        height: 525
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d722396b780031d0800000000000000
+      internalID: -3373186794761607210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barraquinhaVerticalAmarela
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 2570
+        width: 191
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10ecab5241e59400800000000000000
+      internalID: 330417822803746846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barracaFrutasVerde
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 2564
+        width: 625
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422299e148d06dea0800000000000000
+      internalID: -5848472204993813980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caminhaoVermelho
+      rect:
+        serializedVersion: 2
+        x: 4341
+        y: 2501
+        width: 930
+        height: 610
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b409a4ad135b5b060800000000000000
+      internalID: 6968675224146055243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects_6
+      rect:
+        serializedVersion: 2
+        x: 5047
+        y: 2482
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016d768867c377b50800000000000000
+      internalID: 6590803059472324112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barracaLegumesVerde
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1667
+        width: 1003
+        height: 656
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbac793890a54740800000000000000
+      internalID: 5135687525745863669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barracaCarnesVermelha
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 1653
+        width: 929
+        height: 706
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3142420eb083c6370800000000000000
+      internalID: 8317084235502724115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trailerBranco
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 1749
+        width: 421
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cb66edcced45ab0800000000000000
+      internalID: -5020142713125290993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tendaAmarela
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 1744
+        width: 497
+        height: 505
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5395f61f9a672cd80800000000000000
+      internalID: -8231886696607688395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arvorePrimavera
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 354
+        width: 1028
+        height: 884
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 140ee933478540540800000000000000
+      internalID: 4973197144629370945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fuscaAbertoAzul
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 989
+        width: 622
+        height: 377
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc115d69a663af2f0800000000000000
+      internalID: -938377740928347697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

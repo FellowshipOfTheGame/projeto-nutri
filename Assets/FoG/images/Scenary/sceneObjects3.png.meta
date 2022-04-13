@@ -1,7 +1,46 @@
 fileFormatVersion: 2
-guid: 6e58038f3b0074240903b8c9ef83399f
+guid: 9ca78722c3aaa1d4fa7bd843b4524dc5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7894753303378891874
+    second: sceneObjects3_0
+  - first:
+      213: -8879463107238469746
+    second: sceneObjects3_1
+  - first:
+      213: -8409974226373424467
+    second: sceneObjects3_2
+  - first:
+      213: 3734204697109053404
+    second: sceneObjects3_3
+  - first:
+      213: 1533229804855715114
+    second: sceneObjects3_4
+  - first:
+      213: -2252478412618169279
+    second: sceneObjects3_5
+  - first:
+      213: 5286790377156067252
+    second: sceneObjects3_6
+  - first:
+      213: 3434205170698938854
+    second: sceneObjects3_7
+  - first:
+      213: -5456035865736095153
+    second: sceneObjects3_8
+  - first:
+      213: 265167785852577514
+    second: sceneObjects3_9
+  - first:
+      213: 5445579713993659397
+    second: sceneObjects3_10
+  - first:
+      213: 6340193906855569640
+    second: sceneObjects3_11
+  - first:
+      213: 2377064741858196720
+    second: sceneObjects3_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +80,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -68,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -80,7 +119,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -89,7 +128,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sceneObjects3_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 2589
+        width: 626
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b62c2e2b3307290800000000000000
+      internalID: -7894753303378891874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_1
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 2570
+        width: 639
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f5dd0795fc5c480800000000000000
+      internalID: -8879463107238469746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_2
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 2529
+        width: 765
+        height: 525
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa42d2cff4c94b80800000000000000
+      internalID: -8409974226373424467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_3
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 2570
+        width: 191
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfb7c9236f82d330800000000000000
+      internalID: 3734204697109053404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_4
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 2564
+        width: 625
+        height: 453
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2567755260274510800000000000000
+      internalID: 1533229804855715114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_5
+      rect:
+        serializedVersion: 2
+        x: 4341
+        y: 2501
+        width: 930
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14488af51d69db0e0800000000000000
+      internalID: -2252478412618169279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_6
+      rect:
+        serializedVersion: 2
+        x: 5047
+        y: 2482
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf375066d37e5940800000000000000
+      internalID: 5286790377156067252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_7
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1667
+        width: 1003
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9e155586fb8af20800000000000000
+      internalID: 3434205170698938854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_8
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 1653
+        width: 929
+        height: 706
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a520599444844b0800000000000000
+      internalID: -5456035865736095153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_9
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 1749
+        width: 421
+        height: 468
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6ae9142b01ea300800000000000000
+      internalID: 265167785852577514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_10
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 1744
+        width: 497
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5045aa0e5e5929b40800000000000000
+      internalID: 5445579713993659397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_11
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 354
+        width: 1028
+        height: 884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8e83934c4ecf750800000000000000
+      internalID: 6340193906855569640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sceneObjects3_12
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 986
+        width: 626
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc309ad9c70df020800000000000000
+      internalID: 2377064741858196720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,23 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class FinishLineZoneScript : MonoBehaviour
 {
-    public GameObject goPlayer;
-    bool gpKart;
-    int kartLevel;
-    // Start is called before the first frame update
+    [SerializeField] Sprite closedHoodSprite;
+    [SerializeField] Sprite openedHoodSprite;
+
+    SpriteRenderer spriteRenderer;
+
     void Start()
     {
-        goPlayer = GameObject.Find("Player");
-        gpKart = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        Debug.Log("Sprite renderer variable: " + spriteRenderer);
+        CloseHood();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CloseHood()
     {
-        
+        spriteRenderer.sprite = closedHoodSprite;
+    }
+
+    public void OpenHood()
+    {
+        spriteRenderer.sprite = openedHoodSprite;
     }
 
     void OnCollisionEnter2D(Collision2D other)

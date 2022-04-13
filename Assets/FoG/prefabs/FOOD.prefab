@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1613187652234925409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2369250273056694596, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
+  m_Sprite: {fileID: 2123768581793856360, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 2.9, y: 2.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -97,10 +97,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -116,15 +116,15 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.039662957, y: -0.022034883}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2.9, y: 2.9}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -145,19 +145,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goodImges:
-  - {fileID: -2369250273056694596, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
-  - {fileID: 6735687475205278237, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
-  - {fileID: 8177119112093217199, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
-  - {fileID: 274750079633856785, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
+  - {fileID: 2744664403773280876, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 2123768581793856360, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: -5129563003610640965, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 6863527922406840431, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 4430504930690757826, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: 5041231922559526202, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -6659029614112981999, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -7382135063201800285, guid: c440c1c29465c3853b75f0644791c495, type: 3}
   badImges:
-  - {fileID: -4265546918001094043, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
-  - {fileID: -4962655654197574050, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
-  - {fileID: 7666023855200887859, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
+  - {fileID: -5177149840180280500, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: -6664239113880130390, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 1975960374737434944, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 6172476946369497652, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 4243674203966928893, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -7768488569327295041, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: 5737198203248615751, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: 3884377466438898961, guid: c440c1c29465c3853b75f0644791c495, type: 3}
   neutralImges:
-  - {fileID: -3117253034515828741, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
-  - {fileID: 264356977131636908, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
-  - {fileID: 2280223104302219607, guid: 11886d0167e79b24e87daf11785319e0, type: 3}
+  - {fileID: -4987484083600577741, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 3378965398701460375, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 4041745410584963169, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: -8039077900159237657, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -8992761893527361908, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -818498410331057324, guid: c440c1c29465c3853b75f0644791c495, type: 3}
   failSprite: {fileID: 21300000, guid: ab52c9309324e3257af8b77465b35fd8, type: 3}
   lifetime: 15
   bulletSpeed: 2
-  foodType: 0
+  foodType: 1

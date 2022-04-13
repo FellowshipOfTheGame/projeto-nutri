@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class bulletBehaviour : MonoBehaviour
 {
     /* Sprite management*/
@@ -23,17 +22,14 @@ public class bulletBehaviour : MonoBehaviour
     int auxIndex;
     SpriteRenderer spriterenderer;
 
-    [SerializeField]
-    float lifetime;
+    [SerializeField] float lifetime;
 
     Rigidbody2D bulletRB;
 
-    [SerializeField]
-    float bulletSpeed;
-    // Start is called before the first frame update
-    [SerializeField]
-    FoodTypeNum foodType;
-   public enum FoodTypeNum
+    [SerializeField] float bulletSpeed;
+    [SerializeField] FoodTypeNum foodType;
+
+    public enum FoodTypeNum
     {
         InNatura,
         Processed,
@@ -70,25 +66,11 @@ public class bulletBehaviour : MonoBehaviour
         }
 
         ChangeSprite(selectedSprite, spriterenderer);
+
+        Destroy(gameObject, lifetime);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        lifetime -= Time.deltaTime;
-        if(lifetime < 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    void FixedUpdate()
-    {
-      
-    }
-
-
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -98,17 +80,17 @@ public class bulletBehaviour : MonoBehaviour
             {
                 case FoodTypeNum.InNatura:
                     playerStats.AddPoint();
-                    playerStats.AddFoodToKart(0);
+                    playerStats.AddFoodToKart(foodType);
                 break;
 
                 case FoodTypeNum.Processed:
                     playerStats.SoftReset();
-                    playerStats.AddFoodToKart(1);
+                    playerStats.AddFoodToKart(foodType);
                 break;
 
                 case FoodTypeNum.Ultra:
                     playerStats.ResetStreak();
-                    playerStats.AddFoodToKart(1);
+                    playerStats.AddFoodToKart(foodType);
                 break;
 
                 default:
