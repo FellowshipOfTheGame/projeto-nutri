@@ -90,7 +90,7 @@ public class bulletBehaviour : MonoBehaviour
                 break;
 
                 case FoodTypeNum.Ultra:
-                    stats.ResetStreak();
+                    stats.ResetMultiplier();
                     stats.AddFoodToKart(foodType);
                 break;
 

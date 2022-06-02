@@ -1,13 +1,21 @@
 using UnityEngine;
+using System;
 
 public class playerStats : MonoBehaviour
 {
     [SerializeField] FinishLineZoneScript finishLine;
+    [SerializeField] int MaxStreak = 5;
+    [SerializeField] int MaxMultiplier = 5;
+
+    public event Action<int> OnUpdateTotalPoints;
+    public event Action<int> OnPointsRecieved;
+    public event Action<int> OnUpdateStreak;
+    public event Action<int> OnUpdateMultiplier;
 
     int kartLevel;
     bool hasKart;
     int points = 0;
-    int barPoint;
+    int streakCounter;
     int multPoint;
 
     public int maxKartLevel = 24;
@@ -19,32 +27,45 @@ public class playerStats : MonoBehaviour
 
     PewController playerController;
 
-    public int GetPoints()
+    public int Points
     {
-        return points;
+        get => points;
+        private set 
+        {
+            OnPointsRecieved?.Invoke(value - points);
+            points = value;
+            OnUpdateTotalPoints?.Invoke(points);
+        }
     }
-    public int GetBarPoint()
+    public int StreakCounter
     {
-        return barPoint;
+        get => streakCounter;
+        private set
+        {
+            streakCounter = value;
+            OnUpdateStreak?.Invoke(streakCounter);
+        }
     }
-    public int GetMultPoint()
+    public int MultPoint
     {
-        return multPoint;
+        get => multPoint;
+        private set
+        {
+            multPoint = value;
+            OnUpdateMultiplier?.Invoke(multPoint);
+        }
     }
-    public  void SetKartLevel(int newLevel)
+    public int KartLevel
     {
-        kartLevel = newLevel;
-    }
-    public  int GetKartLevel()
-    {
-        return kartLevel;
+        get => kartLevel;
+        set => kartLevel = value;
     }
 
     void Start()
     {
         kartLevel = 0;
         hasKart = true; //Debug purposes. I'll change it later -- Nevermind
-        ResetStreak();
+        ResetMultiplier();
         playerController = GetComponent<PewController>();
     }
 
@@ -59,31 +80,36 @@ public class playerStats : MonoBehaviour
     {
         if (hasKart)
         {
-            points += multPoint;
-            barPoint++;
-            if (barPoint > 8) // Magic number bro
+            Points += MultPoint;
+            StreakCounter++;
+            if (StreakCounter > MaxStreak) 
             {
-                multPoint++;
-                if (multPoint <= 4)
+                MultPoint++;
+                if (MultPoint < MaxMultiplier)
                 {
-                    barPoint = 0;
+                    StreakCounter = 0;
                 }
                 /* Fix those damn magic numbers*/
-                barPoint = Mathf.Clamp(barPoint,0,8);
-                multPoint = Mathf.Clamp(multPoint,1,4);
+                StreakCounter = Mathf.Clamp(StreakCounter,0,MaxStreak);
+                MultPoint = Mathf.Clamp(MultPoint,1,MaxMultiplier);
             }
         }
     }
 
-    public void ResetStreak() //Streak becomes as the same as initial state
+    public void ResetMultiplier()
     {
-        barPoint = 0;
-        multPoint = 1;
+        StreakCounter = 0;
+        MultPoint = 1;
     }
 
-    public void SoftReset() //Just the bar point got reseted
+    // Resets the streak counter. If on MaxMultiplier, decreases one multiplier level
+    public void SoftReset()
     {
-        barPoint = 0;
+        StreakCounter = 0;
+        if (MultPoint == MaxMultiplier)
+        {
+            MultPoint--;
+        }
     }
 
     public void AddFoodToKart(bulletBehaviour.FoodTypeNum type) // Had to transform the whole operation in a function
@@ -137,11 +163,11 @@ public class playerStats : MonoBehaviour
             if (hasKart && kartLevel >= maxKartLevel)
             {
                 /* Summing up: It's all a reset*/
-                SetKartLevel(0);
+                KartLevel = 0;
                 hasKart = true;
                 float percentageOnKart = ((float)GFOK)/((float)FOK) * 100; 
                 Debug.Log("Percentage: " + percentageOnKart);
-                points += multPoint * (int)percentageOnKart; // Jankie code, but it was what worked for this
+                Points += MultPoint * (int)percentageOnKart; // Jankie code, but it was what worked for this
                 GFOK = 0;
                 FOK = 0;
                 kartLevel = 0;
