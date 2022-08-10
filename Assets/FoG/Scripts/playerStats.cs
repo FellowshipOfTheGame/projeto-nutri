@@ -17,6 +17,8 @@ public class playerStats : MonoBehaviour
     int points = 0;
     int streakCounter;
     int multPoint;
+    int counterHoodOpened;
+    float timeToAdd;
 
     public int maxKartLevel = 24;
 
@@ -63,6 +65,7 @@ public class playerStats : MonoBehaviour
 
     void Start()
     {
+        counterHoodOpened = 0;
         kartLevel = 0;
         hasKart = true; //Debug purposes. I'll change it later -- Nevermind
         ResetMultiplier();
@@ -149,7 +152,8 @@ public class playerStats : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Kartzone")
+        /* Feature not used :( */
+        if (other.gameObject.tag == "Kartzone") 
         {
             Debug.Log("OK - Player + Kartzone");
             if(!hasKart)
@@ -172,7 +176,10 @@ public class playerStats : MonoBehaviour
                 FOK = 0;
                 kartLevel = 0;
                 Debug.Log("Carrinho colocado");
-                CloseHood();
+                counterHoodOpened++;
+                timeToAdd = percentageOnKart/(1 + Mathf.Log(counterHoodOpened,10)); // Check formula later
+                timeToAdd += 3.0f;
+                CloseHood(timeToAdd);
             }
         }
     }
@@ -182,10 +189,16 @@ public class playerStats : MonoBehaviour
         finishLine.OpenHood();
     }
 
-    void CloseHood()
+    void CloseHood(float addingTimer)
     {
         finishLine.CloseHood();
         currentFoodLevel = 0;
         playerController.UpdateKartFoodLevel(currentFoodLevel);
+        TimerTextManager.AddTimer(addingTimer);
+    }
+
+    public void LaunchClock()
+    {
+        
     }
 }

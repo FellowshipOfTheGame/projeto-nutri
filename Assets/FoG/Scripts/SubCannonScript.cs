@@ -1,6 +1,5 @@
 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SubCannonScript : MonoBehaviour
@@ -111,5 +110,10 @@ public class SubCannonScript : MonoBehaviour
     public void setYLimit(float lim)
     {
         yLimit = lim;
+    }
+
+    public void ShootClock()
+    {
+        
     }
 }

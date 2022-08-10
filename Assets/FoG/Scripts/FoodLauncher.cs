@@ -187,5 +187,4 @@ public class FoodLauncher : MonoBehaviour
             break;
         }
     }
-
 }

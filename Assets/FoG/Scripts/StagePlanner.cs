@@ -6,10 +6,7 @@ using UnityEngine;
 possible */
 
 public class StagePlanner : MonoBehaviour
-{
-
-    
-
+{   
     [SerializeField]
     float[] stageTiming = new float[3];
     int actualStage;
@@ -27,6 +24,7 @@ public class StagePlanner : MonoBehaviour
     }
 
     // Update is called once per frame
+    /* What should we do to control the difficulty flow*/
     void Update()
     {
         timing -= Time.deltaTime;
