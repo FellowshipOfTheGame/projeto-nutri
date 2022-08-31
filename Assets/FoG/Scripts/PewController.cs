@@ -23,6 +23,7 @@ public class PewController : MonoBehaviour
     private Vector3 scale;
 
     bool isFlipped = false;
+    public bool pausedStatus = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -84,4 +85,5 @@ public class PewController : MonoBehaviour
     {
         kartAnimator.SetInteger(kartFoodAnimatorName, foodLevel);
     }
+
 }
