@@ -14,12 +14,14 @@ public class ScoreScript : MonoBehaviour
 
     [SerializeField] float pointsEarnedFadeDuration = 1f;
 
+    [SerializeField] PlayerSpawner playerSpawner;
+
     float pointEarnedDynamicAlpha = 0;
     playerStats playerstats;
 
-    void Awake()
+    void Start()
     {
-        var goPlayer = GameObject.Find("Player");
+        var goPlayer = playerSpawner.currentPlayer;
         playerstats = goPlayer.GetComponent<playerStats>(); 
 
         playerstats.OnUpdateTotalPoints += SetScore;

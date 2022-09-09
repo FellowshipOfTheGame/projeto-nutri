@@ -16,6 +16,7 @@ public class FoodLauncher : MonoBehaviour
     int numFases;
     [SerializeField]
     float timing;
+    [SerializeField] PlayerSpawner playerSpawner;
 
 
 
@@ -52,6 +53,8 @@ public class FoodLauncher : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cam = Camera.main;
+
         actualStage = 0; // MUST start at zero
 
         difAux = difMagicalNumber/(float)dif; //Temporary, have to find a function that optmizes the rate according to the difficulty in terms of level design

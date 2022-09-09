@@ -3,7 +3,7 @@ using System;
 
 public class playerStats : MonoBehaviour
 {
-    [SerializeField] FinishLineZoneScript finishLine;
+    public FinishLineZoneScript finishLine;
     [SerializeField] int MaxStreak = 5;
     [SerializeField] int MaxMultiplier = 5;
 
