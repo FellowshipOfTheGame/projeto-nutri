@@ -18,6 +18,16 @@ public class bulletBehaviour : MonoBehaviour
     [SerializeField]
     public Sprite failSprite;
 
+    /*[SerializeField]
+    public GameObject jukebox;
+
+
+    private AudioSource audiosource;
+    private AudioClip hitSound;*/
+
+    [SerializeField]
+    public List<AudioClip> audioList = new List<AudioClip>();
+
     Sprite selectedSprite;
     int auxIndex;
     SpriteRenderer spriterenderer;
@@ -34,6 +44,14 @@ public class bulletBehaviour : MonoBehaviour
         InNatura,
         Processed,
         Ultra
+    };
+
+    public enum AudioType
+    {
+        GetItem,
+        LevelUp,
+        LevelDown,
+        LevelZero  
     };
 
     void Start()
@@ -74,24 +92,26 @@ public class bulletBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            playerStats stats = other.gameObject.GetComponent<playerStats>();
-            
+            playerStats stats = other.gameObject.GetComponent<playerStats>();            
             /* Detects which type of food we will get*/
             switch(foodType)
             {
                 case FoodTypeNum.InNatura:
                     stats.AddPoint();
                     stats.AddFoodToKart(foodType);
+                    stats.PlaySound(audioList[(int)AudioType.GetItem]);                   
                 break;
 
                 case FoodTypeNum.Processed:
                     stats.SoftReset();
                     stats.AddFoodToKart(foodType);
+                    stats.PlaySound(audioList[(int)AudioType.LevelDown]);
                 break;
 
                 case FoodTypeNum.Ultra:
                     stats.ResetMultiplier();
                     stats.AddFoodToKart(foodType);
+                    stats.PlaySound(audioList[(int)AudioType.LevelZero]);                   
                 break;
 
                 default:

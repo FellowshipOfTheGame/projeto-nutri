@@ -3,6 +3,9 @@ using System;
 
 public class playerStats : MonoBehaviour
 {
+    [SerializeField]
+    public AudioSource audiosource;
+
     public FinishLineZoneScript finishLine;
     [SerializeField] int MaxStreak = 5;
     [SerializeField] int MaxMultiplier = 5;
@@ -65,6 +68,7 @@ public class playerStats : MonoBehaviour
 
     void Start()
     {
+        audiosource = GetComponent<AudioSource>();
         counterHoodOpened = 0;
         kartLevel = 0;
         hasKart = true; //Debug purposes. I'll change it later -- Nevermind
@@ -197,8 +201,10 @@ public class playerStats : MonoBehaviour
         TimerTextManager.AddTimer(addingTimer);
     }
 
-    public void LaunchClock()
+    public void PlaySound(AudioClip audioclip)
     {
-        
+        audiosource.clip = audioclip;
+        audiosource.Play();
     }
+
 }

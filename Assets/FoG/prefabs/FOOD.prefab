@@ -170,6 +170,11 @@ MonoBehaviour:
   - {fileID: -8992761893527361908, guid: c440c1c29465c3853b75f0644791c495, type: 3}
   - {fileID: -818498410331057324, guid: c440c1c29465c3853b75f0644791c495, type: 3}
   failSprite: {fileID: 21300000, guid: ab52c9309324e3257af8b77465b35fd8, type: 3}
+  audioList:
+  - {fileID: 8300000, guid: 10c8639239ef12bfbb0f4302f9191bff, type: 3}
+  - {fileID: 8300000, guid: 1859802d5cd900b95bd8751dad2e9fa9, type: 3}
+  - {fileID: 8300000, guid: 998cbcc00729ab397999beef26b515ba, type: 3}
+  - {fileID: 8300000, guid: cec5a726653eb569e8e6b61151835226, type: 3}
   lifetime: 15
   bulletSpeed: 2
   foodType: 1
