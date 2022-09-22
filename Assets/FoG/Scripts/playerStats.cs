@@ -76,13 +76,6 @@ public class playerStats : MonoBehaviour
         playerController = GetComponent<PewController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //Debug.Log("KL: " + kartLevel);
-        //Debug.Log("Has Kart = " + hasKart);
-    }
-
     public void AddPoint() // Adds points accordingly to the mult value
     {
         if (hasKart)
@@ -142,17 +135,6 @@ public class playerStats : MonoBehaviour
             playerController.UpdateKartFoodLevel(currentFoodLevel);
         }
     }
-
-    public void SetKartState(bool stating) // Barely used
-    {
-        hasKart = stating;
-    }
-
-    public bool GetKartState() // Barely used
-    {
-        return hasKart;
-    }
-
 
     void OnTriggerEnter2D(Collider2D other)
     {
