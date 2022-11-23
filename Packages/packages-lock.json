@@ -1,5 +1,21 @@
 {
   "dependencies": {
+    "com.legustavinho.legendary-tools-common": {
+      "version": "https://github.com/LeGustaVinho/legendary-tools-common.git#v1.0.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "25b62e85291c52dc03bdbd804bc6cf5d16c062ed"
+    },
+    "com.legustavinho.legendary-tools-ui": {
+      "version": "https://github.com/LeGustaVinho/legendary-tools-ui.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.legustavinho.legendary-tools-common": "https://github.com/LeGustaVinho/legendary-tools-common.git"
+      },
+      "hash": "933f35d3bddafa5c25adb4952d17020547f71247"
+    },
     "com.unity.2d.animation": {
       "version": "5.0.10",
       "depth": 0,
@@ -90,11 +106,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "2.0.7",
+      "version": "3.0.16",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.test-framework": "1.1.1"
+        "com.unity.ext.nunit": "1.0.6"
       },
       "url": "https://packages.unity.com"
     },
