@@ -16,7 +16,6 @@ namespace FoG.Scripts.UI
     public class MenuController : MonoBehaviour
     {
         [SerializeField] Button clickToContinue;
-        [SerializeField] Button startGame;
     
         [SerializeField] GameObject logoInitial;
         [SerializeField] GameObject mainMenu;
@@ -24,6 +23,8 @@ namespace FoG.Scripts.UI
         [SerializeField] GameObject nutripedia;
 
         Dictionary<Screens, GameObject> screensReference;
+
+        public static MenuController Instance { get; private set; }
 
         public void ChangeScreen(Screens from, Screens to)
         {
@@ -36,14 +37,21 @@ namespace FoG.Scripts.UI
             screensReference[to].SetActive(true);
         }
 
-        void Start()
+        void Awake()
         {
-            startGame.onClick.AddListener(LoadGameScene);
+            if (Instance != null)
+            {
+                Debug.LogError("ERROR! There are 2 MenuControllers, but you can only have ONE.");
+                GameObject.Destroy(Instance);
+            }
+            Instance = this;
+            
             clickToContinue.onClick.AddListener(ExitFromLogo);
         
             logoInitial.SetActive(true);
             mainMenu.SetActive(false);
             characterSelection.SetActive(false);
+            nutripedia.SetActive(false);
 
             screensReference = new Dictionary<Screens, GameObject>()
             {
@@ -60,9 +68,21 @@ namespace FoG.Scripts.UI
             ChangeScreen(Screens.Logo, to);
         }
 
-        void LoadGameScene()
+        public void LoadGameScene()
         {
             SceneManager.LoadScene("Game");
+        }
+
+        void OnDestroy()
+        {
+            if (Instance == this)
+            {
+                Instance = null;
+            }
+            else
+            {
+                Debug.Log("Destroying the oldest MenuController while maintaining the new one as the instance");
+            }
         }
     }
 }
