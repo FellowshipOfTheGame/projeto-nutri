@@ -9,6 +9,8 @@ public class TimerTextManager : MonoBehaviour
 
     public TextMeshProUGUI timeText;
 
+    public GameObject panel;
+
     public float minutes;
     public float seconds;
 
@@ -22,7 +24,7 @@ public class TimerTextManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timing > 0.0f)
+        if(timing >= 0.0f)
         {
             timing -= Time.deltaTime;
         }
