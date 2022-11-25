@@ -9,15 +9,17 @@ public class TimerTextManager : MonoBehaviour
 
     public TextMeshProUGUI timeText;
 
-    public GameObject panel;
+    public GameObject myPanel;
 
     public float minutes;
     public float seconds;
 
+    int quickint = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        timing = 100.0f;
+        timing = 5.0f;
         timeText = gameObject.GetComponent<TextMeshProUGUI>();
     }
 
@@ -30,7 +32,12 @@ public class TimerTextManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Fazer algo aaaaa");
+            //Debug.Log("Acabou o tempo");
+            if(quickint == 0)
+            {
+                StartCoroutine(myPanel.GetComponent<GameOverScreen>().FadeIn());
+                quickint++;
+            }
         }
         minutes = Mathf.FloorToInt(timing/60);
         seconds = Mathf.FloorToInt(timing%60);
