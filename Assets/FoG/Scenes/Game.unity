@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -702,6 +702,7 @@ GameObject:
   - component: {fileID: 858593039}
   - component: {fileID: 858593038}
   - component: {fileID: 858593037}
+  - component: {fileID: 858593041}
   m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -790,6 +791,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &858593041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858593036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc0b3a11f8c855fba792ca176d39cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseButton: {fileID: 2603143305942587251}
+  resumeButton: {fileID: 117817198}
+  pauseMenuUI: {fileID: 85118642}
+  pauseAction: {fileID: 4692266181211219135, guid: 10668bcf8d5d02e9093287e4fe66d439, type: 3}
 --- !u!1 &927655538
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,27 +934,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1051504097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2603143305558866987, guid: 6a973313be6b0b54dbf51dd757699ca8, type: 3}
-  m_PrefabInstance: {fileID: 2603143305942587250}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1051504098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051504097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc0b3a11f8c855fba792ca176d39cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseButton: {fileID: 2603143305942587251}
-  resumeButton: {fileID: 117817198}
-  pauseMenuUI: {fileID: 85118642}
-  pauseAction: {fileID: 4692266181211219135, guid: 10668bcf8d5d02e9093287e4fe66d439, type: 3}
 --- !u!1001 &1173764349
 PrefabInstance:
   m_ObjectHideFlags: 0
