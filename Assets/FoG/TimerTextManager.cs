@@ -19,7 +19,7 @@ public class TimerTextManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timing = 5.0f;
+        timing = minutes * 60 + seconds;
         timeText = gameObject.GetComponent<TextMeshProUGUI>();
     }
 

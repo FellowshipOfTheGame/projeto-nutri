@@ -362,7 +362,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 858593041}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseControl, Assembly-CSharp
         m_MethodName: testButton
         m_Mode: 1
@@ -702,14 +702,13 @@ GameObject:
   - component: {fileID: 858593039}
   - component: {fileID: 858593038}
   - component: {fileID: 858593037}
-  - component: {fileID: 858593041}
   m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &858593037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,22 +790,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &858593041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858593036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc0b3a11f8c855fba792ca176d39cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseButton: {fileID: 0}
-  resumeButton: {fileID: 0}
-  pauseMenuUI: {fileID: 85118642}
-  pauseAction: {fileID: 0}
 --- !u!1 &927655538
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,6 +917,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1051504097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2603143305558866987, guid: 6a973313be6b0b54dbf51dd757699ca8, type: 3}
+  m_PrefabInstance: {fileID: 2603143305942587250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1051504098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051504097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc0b3a11f8c855fba792ca176d39cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseButton: {fileID: 2603143305942587251}
+  resumeButton: {fileID: 117817198}
+  pauseMenuUI: {fileID: 85118642}
+  pauseAction: {fileID: 4692266181211219135, guid: 10668bcf8d5d02e9093287e4fe66d439, type: 3}
 --- !u!1001 &1173764349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1708,11 +1712,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1390834701}
     - target: {fileID: 8726573888880935285, guid: 6a973313be6b0b54dbf51dd757699ca8, type: 3}
+      propertyPath: minutes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726573888880935285, guid: 6a973313be6b0b54dbf51dd757699ca8, type: 3}
       propertyPath: myPanel
       value: 
       objectReference: {fileID: 1390834701}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a973313be6b0b54dbf51dd757699ca8, type: 3}
+--- !u!114 &2603143305942587251 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2254554201021855087, guid: 6a973313be6b0b54dbf51dd757699ca8, type: 3}
+  m_PrefabInstance: {fileID: 2603143305942587250}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6466738515531023130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1723,6 +1742,30 @@ PrefabInstance:
     - target: {fileID: 3276069848537866515, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
       propertyPath: myImage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3543574408035466221, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_Text
+      value: Fim de jogo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739816668084764735, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739816668084764735, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739816668084764735, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739816668084764735, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739816668084764735, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 6466738514757564180, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
       propertyPath: m_Pivot.x
@@ -1815,6 +1858,18 @@ PrefabInstance:
     - target: {fileID: 6466738514757564183, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
       propertyPath: m_Name
       value: GameOverPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7524703689719059685, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709926339867233517, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709926339867233517, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 128374a73ecced17ea35d42a9667fc19, type: 3}

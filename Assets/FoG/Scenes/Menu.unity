@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -20, y: -140}
-  m_SizeDelta: {x: -120, y: 300}
+  m_SizeDelta: {x: -120, y: 340}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &45251425
 MonoBehaviour:
@@ -180,8 +180,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\\tS\xE3o todos os alimentos que s\xE3o consumidos da forma que s\xE3o
-    encontrados na natureza"
+  m_text: "Formula\xE7\xF5es industriais prontas para consumo com in\xFAmeras subst\xE2ncias
+    (\xF3leos, gorduras, a\xE7\xFAcar, amido, prote\xEDnas, gorduras hidrogenadas,
+    amido modificado), com pouca ou nenhuma quantidade de alimentos in natura ou
+    minimamente processados em sua composi\xE7\xE3o."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -208,8 +210,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -843,15 +845,21 @@ MonoBehaviour:
   foodScrollView: {fileID: 1118387696}
   inNaturaContent:
     title: In Natura e minimamente processados
-    body: "Super saud\xE1veis"
+    body: "Partes comest\xEDveis de plantas ou de animais, cogumelos e algas obtidos
+      logo ap\xF3s a separa\xE7\xE3o da natureza ou submetidos a processos simples
+      (desidrata\xE7\xE3o, moagem, fermenta\xE7\xE3o n\xE3o alco\xF3lica). Sem adi\xE7\xE3o
+      de novas subst\xE2ncias ao alimento."
     foodList: {fileID: 1762735388}
   processadoContent:
     title: Processados
-    body: "N\xE3o t\xE3o saudaveis"
+    body: "Produtos fabricados com a adi\xE7\xE3o de sal ou a\xE7\xFAcar e \xF3leo."
     foodList: {fileID: 2104835498}
   ultraContent:
     title: Ultraprocessados
-    body: "Podem prejudicar a sua sa\xFAde"
+    body: "Formula\xE7\xF5es industriais prontas para consumo com in\xFAmeras subst\xE2ncias
+      (\xF3leos, gorduras, a\xE7\xFAcar, amido, prote\xEDnas, gorduras hidrogenadas,
+      amido modificado), com pouca ou nenhuma quantidade de alimentos in natura ou
+      minimamente processados em sua composi\xE7\xE3o."
     foodList: {fileID: 1763272114}
 --- !u!1001 &182833756
 PrefabInstance:
@@ -1183,6 +1191,81 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2071833787066850501, guid: 28e2c95618b738e409645977d6826bbd, type: 3}
   m_PrefabInstance: {fileID: 224033194}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &255625940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255625941}
+  - component: {fileID: 255625943}
+  - component: {fileID: 255625942}
+  m_Layer: 0
+  m_Name: TextoPostit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &255625941
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255625940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 610136476}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -56, y: -171}
+  m_SizeDelta: {x: 503.76, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &255625942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255625940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c7ec80df3c39db84da4173493b72810f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &255625943
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255625940}
+  m_CullTransparentMesh: 1
 --- !u!1 &255940271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,7 +1323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In Natura
+  m_text: In Natura e minimamente processados
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1267,10 +1350,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55
-  m_fontSizeBase: 55
+  m_fontSize: 43
+  m_fontSizeBase: 43
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 55
   m_fontStyle: 16
@@ -2496,6 +2579,8 @@ RectTransform:
   m_Children:
   - {fileID: 255940272}
   - {fileID: 45251424}
+  - {fileID: 255625941}
+  - {fileID: 1231092792}
   m_Father: {fileID: 179050019}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4369,6 +4454,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1231092791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231092792}
+  - component: {fileID: 1231092794}
+  - component: {fileID: 1231092793}
+  m_Layer: 0
+  m_Name: Postit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1231092792
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231092791}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 610136476}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000011444, y: -281.3}
+  m_SizeDelta: {x: 459.93, y: 236.61}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1231092793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231092791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bd0382e0314b1a14c88275202b75d9b6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1231092794
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231092791}
+  m_CullTransparentMesh: 1
 --- !u!1 &1282939059
 GameObject:
   m_ObjectHideFlags: 0
@@ -5537,6 +5697,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!114 &1665044873
 MonoBehaviour:
   m_ObjectHideFlags: 0

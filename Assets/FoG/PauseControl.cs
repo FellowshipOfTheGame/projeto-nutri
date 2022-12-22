@@ -15,8 +15,8 @@ public class PauseControl : MonoBehaviour
         set
         {
             pauseMenuUI.SetActive(value);
-            Time.timeScale = value ? 0.00001f : 1f;
             _isPaused = value;
+            Time.timeScale = value ? 0 : 1;
         }
     }
 

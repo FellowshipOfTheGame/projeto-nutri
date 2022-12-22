@@ -12,7 +12,7 @@ namespace FoG.Scripts.UI
         struct PageContent
         {
             public string title;
-            public string body;
+            [TextArea] public string body;
             public RectTransform foodList;
         }
         
