@@ -50,9 +50,9 @@ public class arrowScript : MonoBehaviour
         //Vector3 camBoundary = mainCamera.ScreenToWorldPoin(  );
         float margin = 40.0f;
         float xArrow = scrToWrldPointBeetle.x;
-        xArrow = Mathf.Clamp(xArrow,((-Screen.width)/2)+margin,((Screen.width)/2) -margin);
+        xArrow = Mathf.Clamp(xArrow,margin,((Screen.width)) -margin);
         float yArrow = scrToWrldPointBeetle.y;
-        yArrow = Mathf.Clamp(yArrow,((-Screen.height)/2)+margin,((Screen.height)/2) -margin);
+        yArrow = Mathf.Clamp(yArrow,margin,((Screen.height)) -margin);
 
         Debug.Log("X: " + xArrow + "Y: " + yArrow);
 
