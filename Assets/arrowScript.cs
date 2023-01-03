@@ -48,7 +48,7 @@ public class arrowScript : MonoBehaviour
         /* Change arrow position*/
         Vector3 scrToWrldPointBeetle = mainCamera.WorldToScreenPoint(beetle.transform.position);
         //Vector3 camBoundary = mainCamera.ScreenToWorldPoin(  );
-        float margin = 40.0f;
+        float margin = 100.0f;
         float xArrow = scrToWrldPointBeetle.x;
         xArrow = Mathf.Clamp(xArrow,margin,((Screen.width)) -margin);
         float yArrow = scrToWrldPointBeetle.y;
