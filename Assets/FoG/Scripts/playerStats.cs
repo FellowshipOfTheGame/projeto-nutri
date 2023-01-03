@@ -25,8 +25,10 @@ public class playerStats : MonoBehaviour
 
     public int maxKartLevel = 24;
 
-    int GFOK = 0; //Good food on kart
-    int FOK = 0; //Food on Kart
+    public int GFOK = 0; //Good food on kart
+    public int BFOK = 0; //Bad food on kart
+    public int TFOK = 0; //Terrible food on Kart
+    public int FOK = 0; //Food on Kart
 
     int currentFoodLevel = 0;
 
@@ -66,6 +68,9 @@ public class playerStats : MonoBehaviour
         set => kartLevel = value;
     }
 
+    /* Quantity of each type of food*/
+ 
+
     void Start()
     {
         audiosource = GetComponent<AudioSource>();
@@ -74,6 +79,7 @@ public class playerStats : MonoBehaviour
         hasKart = true; //Debug purposes. I'll change it later -- Nevermind
         ResetMultiplier();
         playerController = GetComponent<PewController>();
+
     }
 
     public void AddPoint() // Adds points accordingly to the mult value
@@ -120,6 +126,15 @@ public class playerStats : MonoBehaviour
         {
             GFOK++;
         }
+        /* else if chain is a quickfix*/
+        else if(type == bulletBehaviour.FoodTypeNum.Processed)
+        {
+            BFOK++;
+        }
+        else
+        {
+            TFOK++;
+        }
         
         kartLevel++;
         if (kartLevel == maxKartLevel)
@@ -160,6 +175,8 @@ public class playerStats : MonoBehaviour
                 Points += MultPoint * (int)percentageOnKart; // Jankie code, but it was what worked for this
                 GFOK = 0;
                 FOK = 0;
+                BFOK = 0;
+                TFOK = 0;
                 kartLevel = 0;
                 Debug.Log("Carrinho colocado");
                 counterHoodOpened++;
