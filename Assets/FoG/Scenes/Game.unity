@@ -671,8 +671,9 @@ GameObject:
   - component: {fileID: 422688353}
   - component: {fileID: 422688355}
   - component: {fileID: 422688354}
+  - component: {fileID: 422688356}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextPorc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -739,6 +740,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422688352}
   m_CullTransparentMesh: 1
+--- !u!114 &422688356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422688352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ca25df97ef0d0dcb93cc3efbfd8785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &496323821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,8 +1458,9 @@ GameObject:
   - component: {fileID: 1014268553}
   - component: {fileID: 1014268555}
   - component: {fileID: 1014268554}
+  - component: {fileID: 1014268556}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextComp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1504,7 +1518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Comidas Pegas:'
+  m_Text: 'Comidas Pegas: '
 --- !u!222 &1014268555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1513,6 +1527,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014268552}
   m_CullTransparentMesh: 1
+--- !u!114 &1014268556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014268552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c2f229efac156d48ac4a74dbadbf8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1173764349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1703,6 +1729,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1810601497}
     m_Modifications:
+    - target: {fileID: 538656733701930024, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 538656733701930024, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 538656734287158409, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1891,6 +1925,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1810601497}
     m_Modifications:
+    - target: {fileID: 538656733701930024, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 538656733701930024, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 538656734287158409, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2667,8 +2709,9 @@ GameObject:
   - component: {fileID: 1968987488}
   - component: {fileID: 1968987490}
   - component: {fileID: 1968987489}
+  - component: {fileID: 1968987491}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextRes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2735,6 +2778,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968987487}
   m_CullTransparentMesh: 1
+--- !u!114 &1968987491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968987487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3908273231e49190bc3c8d0fd3c2333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2045502998 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 538656734287158409, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
@@ -2931,6 +2986,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1810601497}
     m_Modifications:
+    - target: {fileID: 538656733701930024, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 538656733701930024, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 538656734287158408, guid: 42fb47f1864758d4fa023a13626cf58b, type: 3}
       propertyPath: m_Name
       value: ScrollElement (1)

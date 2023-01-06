@@ -30,6 +30,11 @@ public class playerStats : MonoBehaviour
     public int TFOK = 0; //Terrible food on Kart
     public int FOK = 0; //Food on Kart
 
+    public int GFOKEX = 0; //Good food on kart
+    public int BFOKEX = 0; //Bad food on kart
+    public int TFOKEX = 0; //Terrible food on Kart
+    public int FOKEX = 0; //Food on Kart
+
     int currentFoodLevel = 0;
 
     PewController playerController;
@@ -122,18 +127,22 @@ public class playerStats : MonoBehaviour
     {
         Debug.Log("Added FOOD");
         FOK++;
+        FOKEX++;
         if (type == bulletBehaviour.FoodTypeNum.InNatura)
         {
             GFOK++;
+            GFOKEX++;
         }
         /* else if chain is a quickfix*/
         else if(type == bulletBehaviour.FoodTypeNum.Processed)
         {
             BFOK++;
+            BFOKEX++;
         }
         else
         {
             TFOK++;
+            TFOKEX++;
         }
         
         kartLevel++;
@@ -180,7 +189,7 @@ public class playerStats : MonoBehaviour
                 kartLevel = 0;
                 Debug.Log("Carrinho colocado");
                 counterHoodOpened++;
-                timeToAdd = percentageOnKart/(1 + Mathf.Log(counterHoodOpened,10)); // Check formula later
+                timeToAdd = percentageOnKart/(2 + Mathf.Log(counterHoodOpened*2,5)); // Check formula later
                 timeToAdd += 3.0f;
                 CloseHood(timeToAdd);
             }

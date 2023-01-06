@@ -16,6 +16,7 @@ public class ElemScript : MonoBehaviour
     playerStats pStats;
     Text trivialTxt;
     [SerializeField]public int txtInd;
+    int performance;
     
     /* Strings*/
     string[] strCollection = new string[5]
@@ -26,6 +27,8 @@ public class ElemScript : MonoBehaviour
         "NULL",
         "Reginaldo"
     };
+
+    int[] intCollection = new int[4];
 
 
     // Start is called before the first frame update
@@ -40,7 +43,13 @@ public class ElemScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         pStats = player.GetComponent<playerStats>();
         trivialTxt = gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
-        trivialTxt.text = strCollection[txtInd];
+
+        intCollection[0] = pStats.GFOKEX;
+        intCollection[1] = pStats.BFOKEX;
+        intCollection[2] = pStats.TFOKEX;
+        intCollection[3] = pStats.FOKEX;
+
+        trivialTxt.text = strCollection[txtInd] + " " + intCollection[txtInd].ToString();
     }
 
     // Update is called once per frame

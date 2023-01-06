@@ -10,6 +10,8 @@ public class arrowScript : MonoBehaviour
     public Camera mainCamera;
     Vector3 scrToWrldPointBeetle;
 
+    [SerializeField] public float border;
+
     float aux = 0.1f;
     //public Camera cam;
     // Start is called before the first frame update
@@ -21,42 +23,38 @@ public class arrowScript : MonoBehaviour
         mainCamera = Camera.main;
         //scrToWrldPointBeetle = mainCamera.WorldToScreenPoint(beetle.transform.position);
 
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Debug.DrawLine(beetle.transform.position,player.transform.position,Color.red,0f,false);
-        float auxM = beetle.transform.position.x - player.transform.position.x;
-        float auxA = beetle.transform.position.y - player.transform.position.y;
-        /*float quickfixangles = 1.0f;
-        if(auxM > 0.0f && ) // First Quadrant
-        {
+       // float auxM = beetle.transform.position.x - player.transform.position.x;
+        //float auxA = beetle.transform.position.y - player.transform.position.y;
+        
+        Vector3 playerPointer = (beetle.transform.position - player.transform.position).normalized;
 
-        }
-        else if() // Se
-        {
+        float angle = Mathf.Atan2(playerPointer.y, playerPointer.x) * Mathf.Rad2Deg ;
+        if (angle < 0) angle += 360;
+        angle += 270;
+        myRectTransform.localEulerAngles = new Vector3 (0,0,angle);
 
-        }*/
+        scrToWrldPointBeetle = mainCamera.WorldToScreenPoint(beetle.transform.position);
+
+        Debug.Log("X: " + playerPointer.x + "Y: " + playerPointer.y);
 
 
-        auxA = auxA/auxM;
-        //auxA = Mathf.Atan(auxA) + quickfixangles;
-        auxA = auxA * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f,0f, auxA -90.0f); // ABNER, I USED THIS BECAUSE MY ARROW DRAWING WAS POINTING UP
+        //bool isOffScreen = scrToWrldPointBeetle.x <= 0f || scrToWrldPointBeetle.x >= Screen.width || ; 
 
-        /* Change arrow position*/
-        Vector3 scrToWrldPointBeetle = mainCamera.WorldToScreenPoint(beetle.transform.position);
-        //Vector3 camBoundary = mainCamera.ScreenToWorldPoin(  );
-        float margin = 100.0f;
+
         float xArrow = scrToWrldPointBeetle.x;
-        xArrow = Mathf.Clamp(xArrow,margin,((Screen.width)) -margin);
         float yArrow = scrToWrldPointBeetle.y;
-        yArrow = Mathf.Clamp(yArrow,margin,((Screen.height)) -margin);
 
-        Debug.Log("X: " + xArrow + "Y: " + yArrow);
+        xArrow = Mathf.Clamp(xArrow,border,Screen.width - border);
+        yArrow = Mathf.Clamp(yArrow,border,Screen.height - border);
 
         myRectTransform.anchoredPosition = new Vector2 (xArrow,yArrow);
-        //transform.position = new Vector3(xArrow,yArrow,0f);
+        transform.position = new Vector3(xArrow,yArrow,0f);
     }
 }
