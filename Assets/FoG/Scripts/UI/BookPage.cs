@@ -52,14 +52,16 @@ namespace FoG.Scripts.UI
             if (label != Nutripedia.Labels.Intro)
             {
                 _labelContent[label].foodList.gameObject.SetActive(true);
+                foodScrollView.gameObject.SetActive(true);
                 foodScrollView.content = _labelContent[label].foodList;
                 title.text = _labelContent[label].title;
                 body.text = _labelContent[label].body;
             }
             else
             {
-                title.text = "INTRO";
-                body.text = "";
+                foodScrollView.gameObject.SetActive(false);
+                title.text = "INTRODUÇÂO";
+                body.text = "Objetivo:";
             }
 
             _currentLabel = label;

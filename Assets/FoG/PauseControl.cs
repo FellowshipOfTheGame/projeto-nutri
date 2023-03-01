@@ -9,7 +9,7 @@ public class PauseControl : MonoBehaviour
     [SerializeField] GameObject pauseMenuUI;
     [SerializeField] InputActionReference pauseAction;
 
-    bool IsPaused
+    public bool IsPaused
     {
         get => _isPaused;
         set
