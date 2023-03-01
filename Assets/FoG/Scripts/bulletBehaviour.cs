@@ -18,13 +18,6 @@ public class bulletBehaviour : MonoBehaviour
     [SerializeField]
     public Sprite failSprite;
 
-    /*[SerializeField]
-    public GameObject jukebox;
-
-
-    private AudioSource audiosource;
-    private AudioClip hitSound;*/
-
     [SerializeField]
     public List<AudioClip> audioList = new List<AudioClip>();
 
