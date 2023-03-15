@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7766588b96b14043abb4310831ef3591, type: 3}
+  m_Name: Iogurte
+  m_EditorClassIdentifier: 
+  Name: Iogurte
+  Description: 
+  Image: {fileID: 3884377466438898961, guid: c440c1c29465c3853b75f0644791c495, type: 3}

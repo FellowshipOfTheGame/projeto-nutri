@@ -1,70 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace FoG.Scripts.UI
 {
     public class BookPage : MonoBehaviour
     {
-        [Serializable]
-        struct PageContent
-        {
-            public string title;
-            [TextArea] public string body;
-            public RectTransform foodList;
-        }
+        [Header("Left components")]
+        [SerializeField] TextMeshProUGUI _title;
+        [SerializeField] TextMeshProUGUI _leftText;
+        [SerializeField] PostIt _postIt;
         
-        [SerializeField] TextMeshProUGUI title;
-        [SerializeField] TextMeshProUGUI body;
-        [SerializeField] ScrollRect foodScrollView;
+        [Header("Right components")]
+        [SerializeField] TextMeshProUGUI _rightText;
+        [SerializeField] FoodScrollViewer _foodScrollView;
 
-        [SerializeField] PageContent inNaturaContent;
-        [SerializeField] PageContent processadoContent;
-        [SerializeField] PageContent ultraContent;
+        [Header("Data")]
+        [SerializeField] PageData _introContent;
+        [SerializeField] PageData _inNaturaContent;
+        [SerializeField] PageData _processadoContent;
+        [SerializeField] PageData _ultraContent;
 
-        Dictionary<Nutripedia.Labels, PageContent> _labelContent;
-        Nutripedia.Labels _currentLabel;
+        Dictionary<Nutripedia.Labels, PageData> _labelContent;
 
         void Awake()
         {
-            _labelContent = new Dictionary<Nutripedia.Labels, PageContent>()
+            _labelContent = new Dictionary<Nutripedia.Labels, PageData>()
             {
-                { Nutripedia.Labels.Natura, inNaturaContent },
-                { Nutripedia.Labels.Processado, processadoContent },
-                { Nutripedia.Labels.Ultra, ultraContent }
+                { Nutripedia.Labels.Intro, _introContent },
+                { Nutripedia.Labels.Natura, _inNaturaContent },
+                { Nutripedia.Labels.Processado, _processadoContent },
+                { Nutripedia.Labels.Ultra, _ultraContent }
             };
-
-            foreach (var labelContent in _labelContent)
-            {
-                labelContent.Value.foodList.gameObject.SetActive(false);
-            }
         }
 
         public void ChangePage(Nutripedia.Labels label)
         {
-            if (_currentLabel != Nutripedia.Labels.Intro)
-            {
-                _labelContent[_currentLabel].foodList.gameObject.SetActive(false);
-            }
-            
-            if (label != Nutripedia.Labels.Intro)
-            {
-                _labelContent[label].foodList.gameObject.SetActive(true);
-                foodScrollView.gameObject.SetActive(true);
-                foodScrollView.content = _labelContent[label].foodList;
-                title.text = _labelContent[label].title;
-                body.text = _labelContent[label].body;
-            }
-            else
-            {
-                foodScrollView.gameObject.SetActive(false);
-                title.text = "INTRODUÇÂO";
-                body.text = "Objetivo:";
-            }
+            PageData content = _labelContent[label];
 
-            _currentLabel = label;
+            _title.text = content.Title;
+            _leftText.text = content.LeftText;
+            _postIt.Refresh(content.PostIt);
+
+            _rightText.text = content.RightText;
+            _rightText.gameObject.SetActive(!string.IsNullOrWhiteSpace(content.RightText));
+            
+            _foodScrollView.Refresh(content.FoodList, content.FoodBackgroundColor);
         }
     }
 }
