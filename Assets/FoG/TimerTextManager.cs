@@ -1,52 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
 public class TimerTextManager : MonoBehaviour
 {
-    public static float timing;
+    static float CURRENT_TIME;
 
-    public TextMeshProUGUI timeText;
+    [SerializeField] TextMeshProUGUI _clockText;
+    [SerializeField] GameOverScreen _gameOverScreen;
 
-    public GameObject myPanel;
+    [SerializeField] float minutes;
+    [SerializeField] float seconds;
 
-    public float minutes;
-    public float seconds;
-
-    int quickint = 0;
-
-    // Start is called before the first frame update
     void Start()
     {
-        timing = minutes * 60 + seconds;
-        timeText = gameObject.GetComponent<TextMeshProUGUI>();
+        CURRENT_TIME = minutes * 60 + seconds;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timing >= 0.0f)
+        if (CURRENT_TIME > 0.0f)
         {
-            timing -= Time.deltaTime;
-        }
-        else
-        {
-            //Debug.Log("Acabou o tempo");
-            if(quickint == 0)
+            CURRENT_TIME -= Time.deltaTime;
+
+            if (CURRENT_TIME <= 0)
             {
-                StartCoroutine(myPanel.GetComponent<GameOverScreen>().FadeIn());
-                quickint++;
+                _gameOverScreen.GameOver();
+                CURRENT_TIME = 0;
             }
+            
+            minutes = Mathf.FloorToInt(CURRENT_TIME / 60);
+            seconds = Mathf.FloorToInt(CURRENT_TIME % 60);
+            _clockText.text = $"{minutes:00}:{seconds:00}";
         }
-        minutes = Mathf.FloorToInt(timing/60);
-        seconds = Mathf.FloorToInt(timing%60);
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);;
     }
 
     public static void AddTimer(float adding)
     {
-        timing += adding;
+        CURRENT_TIME += adding;
     }
 
 }

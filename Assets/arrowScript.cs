@@ -42,12 +42,6 @@ public class arrowScript : MonoBehaviour
 
         scrToWrldPointBeetle = mainCamera.WorldToScreenPoint(beetle.transform.position);
 
-        Debug.Log("X: " + playerPointer.x + "Y: " + playerPointer.y);
-
-
-        //bool isOffScreen = scrToWrldPointBeetle.x <= 0f || scrToWrldPointBeetle.x >= Screen.width || ; 
-
-
         float xArrow = scrToWrldPointBeetle.x;
         float yArrow = scrToWrldPointBeetle.y;
 
