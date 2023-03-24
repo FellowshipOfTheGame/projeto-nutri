@@ -14,7 +14,7 @@ public class PauseControl : MonoBehaviour
     [SerializeField] Button _homeButton;
     [SerializeField] ConfirmationPopup _homeConfirmation;
 
-    bool IsPaused
+    public bool IsPaused
     {
         get => _isPaused;
         set

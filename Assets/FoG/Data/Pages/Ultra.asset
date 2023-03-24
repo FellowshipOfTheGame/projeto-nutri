@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b95a242b13497c9e35cf5ce3cde06f, type: 3}
+  m_Name: Ultra
+  m_EditorClassIdentifier: 
+  Title: Ultraprocessados
+  LeftText: "Formula\xE7\xF5es industriais prontas para consumo com in\xFAmeras subst\xE2ncias
+    (\xF3leos, gorduras, a\xE7\xFAcar, amido, prote\xEDnas, gorduras hidrogenadas,
+    amido modificado), com pouca ou nenhuma quantidade de alimentos in natura ou
+    minimamente processados em sua composi\xE7\xE3o."
+  PostIt:
+    ButtonImage: {fileID: 21300000, guid: acd74f7e49475384da86253eda629650, type: 3}
+    Description: 
+  FoodList:
+  - {fileID: 11400000, guid: d1a243f4a71ec3c489b7c6cf97838224, type: 2}
+  - {fileID: 11400000, guid: f38019b416df422489b7fcb0ab8fde77, type: 2}
+  - {fileID: 11400000, guid: 5deb798025ed7ff42b00c40021c147b8, type: 2}
+  - {fileID: 11400000, guid: 2f23dceaec20d5146b20586de047a7d9, type: 2}
+  - {fileID: 11400000, guid: 9abb80b4b9c3dcb4e825e5ac1e77c941, type: 2}
+  - {fileID: 11400000, guid: 77c98da80f02a0542940be8b73043f0d, type: 2}
+  - {fileID: 11400000, guid: 08d0145c5c1274c4ea579b5bee4b73a6, type: 2}
+  - {fileID: 11400000, guid: d4ed3a85a4adf9e47adddac047312726, type: 2}
+  FoodBackgroundColor: {r: 0.38823533, g: 0.36078432, b: 0.5882353, a: 1}
+  RightText: 
