@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,11 +14,21 @@ public class GameOverScreen : MonoBehaviour
 
     [SerializeField] float _fadeDuration = 1;
 
-    [Header("Resumo da jogada")]
-    [SerializeField] TextMeshProUGUI _resumoSaudaveis;
-    [SerializeField] TextMeshProUGUI _resumoNaoSaudaveis;
-    [SerializeField, TextArea] string _textoSaudaveis;
-    [SerializeField, TextArea] string _textoNaoSaudaveis;
+    [SerializeField] TextMeshProUGUI _score;
+
+    [Header("Proporção de alimentos coletados")]
+    [SerializeField, Range(0, 1)] float _targetProportion;
+    [SerializeField] Color _colorAboveTarget;
+    [SerializeField] Color _colorBelowTarget;
+    [SerializeField] TextMeshProUGUI _proportion;
+    [SerializeField, TextArea] string _proportionFormat;
+    [SerializeField, TextArea] string _proportionNoFood;
+    
+    [Header("Feedback da jogada")]
+    [SerializeField] TextMeshProUGUI _feedback;
+    [SerializeField, TextArea] string _feedbackAboveTarget;
+    [SerializeField, TextArea] string _feedbackBelowTarget;
+    [SerializeField, TextArea] string _feedbackNoFood;
 
     playerStats _playerStats;
     
@@ -32,8 +43,31 @@ public class GameOverScreen : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        _resumoSaudaveis.text = string.Format(_textoSaudaveis, _playerStats.GFOKEX);
-        _resumoNaoSaudaveis.text = string.Format(_textoNaoSaudaveis, _playerStats.BFOKEX + _playerStats.TFOKEX);
+        _score.text = _playerStats.Points.ToString();
+        
+        if (_playerStats.FOKEX > 0)
+        {
+            var healthyFoodProportion = _playerStats.GFOKEX / (float) _playerStats.FOKEX;
+            
+            if (healthyFoodProportion >= _targetProportion)
+            {
+                _proportion.text = string.Format(_proportionFormat, ColorUtility.ToHtmlStringRGB(_colorAboveTarget),
+                    healthyFoodProportion.ToString("0.##%", CultureInfo.CurrentCulture));
+                _feedback.text = _feedbackAboveTarget;
+            }
+            else
+            {
+                _proportion.text = string.Format(_proportionFormat, ColorUtility.ToHtmlStringRGB(_colorBelowTarget),
+                    healthyFoodProportion.ToString("0.##%", CultureInfo.CurrentCulture));
+                _feedback.text = string.Format(_feedbackBelowTarget,
+                    _targetProportion.ToString("0.##%", CultureInfo.CurrentCulture));
+            }
+        }
+        else
+        {
+            _proportion.text = _proportionNoFood;
+            _feedback.text = _feedbackNoFood;
+        }
         
         _canvasGroup.alpha = 0;
         _canvasGroup.interactable = false;
