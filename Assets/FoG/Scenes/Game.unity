@@ -660,6 +660,8 @@ MonoBehaviour:
   player: {fileID: 0}
   myRectTransform: {fileID: 0}
   mainCamera: {fileID: 0}
+  myRenderer: {fileID: 0}
+  border: 100
 --- !u!1 &422688352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1349,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4c9bf7a3cb76f75cbaaac7cb7f325bad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f7c02f02110e8473ca2a3a23c2a830a8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

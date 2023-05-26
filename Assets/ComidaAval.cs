@@ -24,7 +24,9 @@ public class ComidaAval : MonoBehaviour
         intCollection[2] = pStats.TFOKEX;
         intCollection[3] = pStats.FOKEX;
 
-        float porcentagem = ((float)intCollection[0])/((float)intCollection[3]*100);
+        float porcentagem = ((float)intCollection[0])/((float)intCollection[3]);
+
+        Debug.Log("Porcentagem: "+ porcentagem);
 
         if(porcentagem > 0.0f && porcentagem < 0.5f)
         {

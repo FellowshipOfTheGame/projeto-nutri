@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class arrowScript : MonoBehaviour
 {
@@ -8,7 +10,9 @@ public class arrowScript : MonoBehaviour
     public GameObject player;
     public RectTransform myRectTransform;
     public Camera mainCamera;
+    public Image myRenderer;
     Vector3 scrToWrldPointBeetle;
+    bool offScreen;
 
     [SerializeField] public float border;
 
@@ -20,6 +24,7 @@ public class arrowScript : MonoBehaviour
         beetle = GameObject.Find("FinishLine");
         player = GameObject.FindWithTag("Player");
         myRectTransform = gameObject.GetComponent<RectTransform>();
+        myRenderer = gameObject.GetComponent<Image>();
         mainCamera = Camera.main;
         //scrToWrldPointBeetle = mainCamera.WorldToScreenPoint(beetle.transform.position);
 
@@ -29,10 +34,7 @@ public class arrowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawLine(beetle.transform.position,player.transform.position,Color.red,0f,false);
-       // float auxM = beetle.transform.position.x - player.transform.position.x;
-        //float auxA = beetle.transform.position.y - player.transform.position.y;
-        
+        Debug.DrawLine(beetle.transform.position,player.transform.position,Color.red,0f,false);        
         Vector3 playerPointer = (beetle.transform.position - player.transform.position).normalized;
 
         float angle = Mathf.Atan2(playerPointer.y, playerPointer.x) * Mathf.Rad2Deg ;
@@ -42,11 +44,7 @@ public class arrowScript : MonoBehaviour
 
         scrToWrldPointBeetle = mainCamera.WorldToScreenPoint(beetle.transform.position);
 
-        Debug.Log("X: " + playerPointer.x + "Y: " + playerPointer.y);
-
-
-        //bool isOffScreen = scrToWrldPointBeetle.x <= 0f || scrToWrldPointBeetle.x >= Screen.width || ; 
-
+        //Debug.Log("X: " + playerPointer.x + "Y: " + playerPointer.y);
 
         float xArrow = scrToWrldPointBeetle.x;
         float yArrow = scrToWrldPointBeetle.y;
@@ -56,5 +54,20 @@ public class arrowScript : MonoBehaviour
 
         myRectTransform.anchoredPosition = new Vector2 (xArrow,yArrow);
         transform.position = new Vector3(xArrow,yArrow,0f);
+        
+        if(scrToWrldPointBeetle.x <= 0 || scrToWrldPointBeetle.x > Screen.width || scrToWrldPointBeetle.y <= 0 || scrToWrldPointBeetle.y > Screen.height)
+        {
+            offScreen = true;
+        }
+        else
+        {
+            offScreen = false;
+        }
+
+        Debug.Log("Beetle.x = " + scrToWrldPointBeetle.x + " Beetle.y = " + scrToWrldPointBeetle.y);
+
+        myRenderer.enabled = offScreen;
+
+
     }
 }

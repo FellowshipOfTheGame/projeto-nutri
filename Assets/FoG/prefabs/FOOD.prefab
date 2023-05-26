@@ -174,7 +174,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 10c8639239ef12bfbb0f4302f9191bff, type: 3}
   - {fileID: 8300000, guid: 1859802d5cd900b95bd8751dad2e9fa9, type: 3}
   - {fileID: 8300000, guid: 998cbcc00729ab397999beef26b515ba, type: 3}
-  - {fileID: 8300000, guid: cec5a726653eb569e8e6b61151835226, type: 3}
+  - {fileID: 8300000, guid: 45eca8c6763150013a9b659c324f810e, type: 3}
   lifetime: 15
   bulletSpeed: 2
-  foodType: 1
+  foodType: 2
