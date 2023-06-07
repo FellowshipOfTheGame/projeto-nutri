@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1613187652234925409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8623545217353499882}
+  - component: {fileID: -4486263163104986378}
+  - component: {fileID: 1292843918555059448}
+  - component: {fileID: -6530862529134747319}
+  - component: {fileID: -6132953416231920457}
+  m_Layer: 0
+  m_Name: FOOD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8623545217353499882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613187652234925409}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &-4486263163104986378
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613187652234925409}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 2123768581793856360, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.9, y: 2.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!50 &1292843918555059448
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613187652234925409}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &-6530862529134747319
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613187652234925409}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.039662957, y: -0.022034883}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2.9, y: 2.9}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2793763, y: 1.2617483}
+  m_EdgeRadius: 0
+--- !u!114 &-6132953416231920457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613187652234925409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 231a0c985505de99ab2a4691ea608cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodImges:
+  - {fileID: 2744664403773280876, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 2123768581793856360, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: -5129563003610640965, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 6863527922406840431, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 4430504930690757826, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: 5041231922559526202, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -6659029614112981999, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -7382135063201800285, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  badImges:
+  - {fileID: -5177149840180280500, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: -6664239113880130390, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 1975960374737434944, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 6172476946369497652, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 4243674203966928893, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -7768488569327295041, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: 5737198203248615751, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: 3884377466438898961, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  neutralImges:
+  - {fileID: -4987484083600577741, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 3378965398701460375, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: 4041745410584963169, guid: b1038a9c06c2eab4a8e00d3b70bc52a0, type: 3}
+  - {fileID: -8039077900159237657, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -8992761893527361908, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  - {fileID: -818498410331057324, guid: c440c1c29465c3853b75f0644791c495, type: 3}
+  failSprite: {fileID: 21300000, guid: ab52c9309324e3257af8b77465b35fd8, type: 3}
+  audioList:
+  - {fileID: 8300000, guid: 10c8639239ef12bfbb0f4302f9191bff, type: 3}
+  - {fileID: 8300000, guid: 1859802d5cd900b95bd8751dad2e9fa9, type: 3}
+  - {fileID: 8300000, guid: 998cbcc00729ab397999beef26b515ba, type: 3}
+  - {fileID: 8300000, guid: 45eca8c6763150013a9b659c324f810e, type: 3}
+  lifetime: 15
+  bulletSpeed: 2
+  foodType: 2

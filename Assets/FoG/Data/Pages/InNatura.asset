@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b95a242b13497c9e35cf5ce3cde06f, type: 3}
+  m_Name: InNatura
+  m_EditorClassIdentifier: 
+  Title: In Natura e Minimamente Processados
+  LeftText: "Partes comest\xEDveis de plantas ou de animais, cogumelos e algas obtidos
+    logo ap\xF3s a separa\xE7\xE3o da natureza ou submetidos a processos simples
+    (desidrata\xE7\xE3o, moagem, fermenta\xE7\xE3o n\xE3o alco\xF3lica). Sem adi\xE7\xE3o
+    de novas subst\xE2ncias ao alimento."
+  PostIt:
+    ButtonImage: {fileID: 21300000, guid: bd0382e0314b1a14c88275202b75d9b6, type: 3}
+    Description: "Os alimentos desta categoria te d\xE3o pontos ao serem coletados,
+      al\xE9m de aumentar o contador de acertos consecutivos. \nQuando seu contador
+      de acertos chegar a 5 ac\xFAmulos, o pr\xF3ximo acerto aumenta o seu multiplicador
+      de pontos e reseta o contador, fazendo com que todos os pontos recebidos sejam
+      multiplicadas por este fator. \nO multiplicador de pontos \xE9 limitado a 5x,
+      permitindo que voc\xEA receba at\xE9 cinco vezes mais pontos enquanto estiver
+      coletando apenas alimentos In Natura e Minimamente Processados.\nAssim como
+      na vida real eles devem ser a base da alimenta\xE7\xE3o, aqui voc\xEA recebe
+      muitos pontos ao coletar v\xE1rios destes na sequ\xEAncia!"
+  FoodList:
+  - {fileID: 11400000, guid: 1ea1d85df89487a45bfebdb6c569f3d4, type: 2}
+  - {fileID: 11400000, guid: 022b98526846a954e845719309860338, type: 2}
+  - {fileID: 11400000, guid: 42cf3737c2fbb70408a7a33fee2c11c3, type: 2}
+  - {fileID: 11400000, guid: ff91f7235a4543140b9cfb730f072043, type: 2}
+  - {fileID: 11400000, guid: a4d361ed8ec18c647b9953a26a706685, type: 2}
+  - {fileID: 11400000, guid: 01173a25d53f05e42a7d34ca98a80eae, type: 2}
+  - {fileID: 11400000, guid: 21858aa4fbe8a42408de402bde77f90e, type: 2}
+  - {fileID: 11400000, guid: 357221471da33a349b615dfab12def94, type: 2}
+  FoodBackgroundColor: {r: 0.34509805, g: 0.7960785, b: 0.41960788, a: 1}
+  RightText: 
