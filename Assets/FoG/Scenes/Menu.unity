@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 86956316}
   - component: {fileID: 86956317}
   - component: {fileID: 86956318}
+  - component: {fileID: 86956319}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -549,6 +550,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &86956319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86956315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef488334949c4bb78a1977dd013e1c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 1282939061}
 --- !u!1001 &100691902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4543,11 +4557,11 @@ RectTransform:
   m_Father: {fileID: 985282608}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -409.3, y: -12.4}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 181.70001, y: -12.4}
   m_SizeDelta: {x: 740, y: 1019}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1014727485
 MonoBehaviour:
   m_ObjectHideFlags: 0

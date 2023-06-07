@@ -16,7 +16,11 @@ MonoBehaviour:
   LeftText: "Produtos fabricados com a adi\xE7\xE3o de sal ou a\xE7\xFAcar e \xF3leo."
   PostIt:
     ButtonImage: {fileID: 21300000, guid: 7ad23807046985c4eb92d63bac826d3b, type: 3}
-    Description: Resetam o contador
+    Description: "Os alimentos desta categoria resetam seu contador de acertos consecutivos,
+      dificultando um pouco o ac\xFAmulo de pontos.\nQuando estiver com o multiplicador
+      de pontua\xE7\xE3o no m\xE1ximo (5x), seu multiplicador ser\xE1 reduzido para
+      4x. Colete mais alimentos da categoria In Natura ou Minimamente Processados
+      para retomar sua sequ\xEAncia de acertos."
   FoodList:
   - {fileID: 11400000, guid: f179d08fe34e8cf4c9c574522fece4c0, type: 2}
   - {fileID: 11400000, guid: ea976412d6da2094ba3a37397e0d4a49, type: 2}

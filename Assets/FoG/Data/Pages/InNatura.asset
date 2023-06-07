@@ -16,11 +16,18 @@ MonoBehaviour:
   LeftText: "Partes comest\xEDveis de plantas ou de animais, cogumelos e algas obtidos
     logo ap\xF3s a separa\xE7\xE3o da natureza ou submetidos a processos simples
     (desidrata\xE7\xE3o, moagem, fermenta\xE7\xE3o n\xE3o alco\xF3lica). Sem adi\xE7\xE3o
-    de novas subst\xE2ncias ao alimento.\n"
+    de novas subst\xE2ncias ao alimento."
   PostIt:
     ButtonImage: {fileID: 21300000, guid: bd0382e0314b1a14c88275202b75d9b6, type: 3}
     Description: "Os alimentos desta categoria te d\xE3o pontos ao serem coletados,
-      al\xE9m de aumentar o contador de multiplica\xE7\xE3o de pontos."
+      al\xE9m de aumentar o contador de acertos consecutivos. \nQuando seu contador
+      de acertos chegar a 5 ac\xFAmulos, o pr\xF3ximo acerto aumenta o seu multiplicador
+      de pontos e reseta o contador, fazendo com que todos os pontos recebidos sejam
+      multiplicadas por este fator. \nO multiplicador de pontos \xE9 limitado a 5x,
+      permitindo que voc\xEA receba at\xE9 cinco vezes mais pontos enquanto estiver
+      coletando apenas alimentos In Natura e Minimamente Processados.\nAssim como
+      na vida real eles devem ser a base da alimenta\xE7\xE3o, aqui voc\xEA recebe
+      muitos pontos ao coletar v\xE1rios destes na sequ\xEAncia!"
   FoodList:
   - {fileID: 11400000, guid: 1ea1d85df89487a45bfebdb6c569f3d4, type: 2}
   - {fileID: 11400000, guid: 022b98526846a954e845719309860338, type: 2}

@@ -26,7 +26,7 @@ namespace FoG.Scripts.UI
 
         public void Refresh(List<Food> foods, Color bgColor)
         {
-            if (foods == null)
+            if (foods == null || foods.Count == 0)
             {
                 gameObject.SetActive(false);
                 return;

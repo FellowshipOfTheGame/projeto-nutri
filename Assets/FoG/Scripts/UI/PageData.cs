@@ -9,13 +9,13 @@ namespace FoG.Scripts.UI
     {
         [Header("Left side")]
         public string Title;
-        [TextArea] public string LeftText;
+        [TextArea(3, 12)] public string LeftText;
         public PostItData PostIt;
         
         [Header("Right side")] 
         public List<Food> FoodList;
         public Color FoodBackgroundColor;
-        [TextArea(3, 6)] public string RightText;
+        [TextArea(3, 12)] public string RightText;
     }
     
     [Serializable]
@@ -23,6 +23,6 @@ namespace FoG.Scripts.UI
     {
         public Sprite ButtonImage;
 
-        [TextArea(3, 6)] public string Description;
+        [TextArea(3, 12)] public string Description;
     }
 }

@@ -14,14 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Title: "Introdu\xE7\xE3o"
   LeftText: "O objetivo deste jogo \xE9 fazer o m\xE1ximo de pontos que conseguir
-    no tempo estipulado. Para isso voc\xEA deve coletar os alimentos que aparecerem
-    na tela, por\xE9m preste aten\xE7\xE3o, pois deve buscar coletar apenas alimentos
-    saud\xE1veis. Para descobrir mais sobre a classifica\xE7\xE3o dos alimentos e
-    seus impactos na pontua\xE7\xE3o, acesse os outros cap\xEDtulos da Nutrip\xE9dia
-    e n\xE3o deixe de clicar nos Post-its"
+    antes que o tempo acabe. \nVoc\xEA pode movimentar o personagem atrav\xE9s do
+    Joystick virtual (exibido ao clicar na tela e arrastar), ou utilizando as teclas
+    WASD do teclado.\nColete os alimentos que aparecem na tela ao movimentar seu
+    personagem atrav\xE9s deles. Por\xE9m, preste aten\xE7\xE3o: tente pegar apenas
+    os alimentos saud\xE1veis. \nPara descobrir mais sobre a classifica\xE7\xE3o
+    dos alimentos e seus impactos na pontua\xE7\xE3o, acesse os outros cap\xEDtulos
+    da Nutrip\xE9dia e n\xE3o deixe de clicar nos Post-its."
   PostIt:
     ButtonImage: {fileID: 0}
     Description: 
   FoodList: []
   FoodBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  RightText: "Voc\xEA pode movimentar seu personagem clicando na tela e arrastando."
+  RightText: "Conforme for coletando os alimentos, deve notar que seu carrinho vai
+    mudando para indicar sua capacidade. Quando estiver bem cheio voc\xEA poder\xE1
+    depositar as compras no fusca azul, localizado no canto inferior direito do mapa,
+    para receber mais pontos e aumentar seu tempo de jogo. Uma seta vermelha te ajudar\xE1
+    a encontrar o ponto de entrega.\n\n\nO conte\xFAdo deste jogo \xE9 baseado no
+    <link=\"https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_populacao_brasileira_2ed.pdf\"><color=#5284BD><b>Guia
+    Alimentar para a Popula\xE7\xE3o Brasileira</b></color></link>, com o prop\xF3sito
+    de promover alimenta\xE7\xE3o adequada, saud\xE1vel e sustent\xE1vel."

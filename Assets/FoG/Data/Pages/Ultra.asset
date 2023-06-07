@@ -19,7 +19,9 @@ MonoBehaviour:
     minimamente processados em sua composi\xE7\xE3o."
   PostIt:
     ButtonImage: {fileID: 21300000, guid: acd74f7e49475384da86253eda629650, type: 3}
-    Description: 
+    Description: "Os alimentos desta categoria resetam o seu contador de acertos
+      e o multiplicador de pontos para 1, reduzindo bastante a quantidade de pontos
+      recebidos. \nDevem ser evitados sempre para garantir uma boa pontua\xE7\xE3o."
   FoodList:
   - {fileID: 11400000, guid: d1a243f4a71ec3c489b7c6cf97838224, type: 2}
   - {fileID: 11400000, guid: f38019b416df422489b7fcb0ab8fde77, type: 2}
