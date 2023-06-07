@@ -3,6 +3,9 @@ using System;
 
 public class playerStats : MonoBehaviour
 {
+
+    public GameObject arrow;
+
     [SerializeField]
     public AudioSource audiosource;
 
@@ -84,6 +87,8 @@ public class playerStats : MonoBehaviour
         hasKart = true; //Debug purposes. I'll change it later -- Nevermind
         ResetMultiplier();
         playerController = GetComponent<PewController>();
+        arrow = GameObject.Find("Seta");
+        arrow.SetActive(false);
 
     }
 
@@ -198,6 +203,7 @@ public class playerStats : MonoBehaviour
 
     void OpenHood()
     {
+        arrow.SetActive(true);
         finishLine.OpenHood();
     }
 
@@ -207,6 +213,7 @@ public class playerStats : MonoBehaviour
         currentFoodLevel = 0;
         playerController.UpdateKartFoodLevel(currentFoodLevel);
         TimerTextManager.AddTimer(addingTimer);
+        arrow.SetActive(false);
     }
 
     public void PlaySound(AudioClip audioclip)
