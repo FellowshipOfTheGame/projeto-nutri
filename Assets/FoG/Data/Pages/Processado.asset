@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Processado
   m_EditorClassIdentifier: 
   Title: Processados
-  LeftText: "Produtos fabricados com a adi\xE7\xE3o de sal ou a\xE7\xFAcar e \xF3leo."
+  LeftText: "Produtos fabricados com a adi\xE7\xE3o de sal ou a\xE7\xFAcar e \xF3leo.\n\nDICA:
+    diminuir o consumo!"
   PostIt:
     ButtonImage: {fileID: 21300000, guid: 7ad23807046985c4eb92d63bac826d3b, type: 3}
     Description: "Os alimentos desta categoria resetam seu contador de acertos consecutivos,

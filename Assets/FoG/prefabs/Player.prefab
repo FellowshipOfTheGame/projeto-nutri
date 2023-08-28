@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e499bfb9e95d7ec5daaae26a38dcdd89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerVelocity: 6.67
+  playerVelocity: 5
   playerAnimator: {fileID: 4961712355190303504}
   walkingAnimatorName: IsWalking
   kartAnimator: {fileID: 5461390157205155964}
@@ -190,6 +190,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fb248f9b-c303-4f67-ae12-de1362e4a8e8
     m_ActionName: Player/Move
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e09e4a8a-ac18-4c31-9271-617cac5c870a
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -207,11 +211,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40a9030c97bc5a788f095fa17c50237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrow: {fileID: 0}
   audiosource: {fileID: 0}
   finishLine: {fileID: 0}
   MaxStreak: 5
   MaxMultiplier: 5
   maxKartLevel: 24
+  GFOK: 0
+  BFOK: 0
+  TFOK: 0
+  FOK: 0
+  GFOKEX: 0
+  BFOKEX: 0
+  TFOKEX: 0
+  FOKEX: 0
 --- !u!61 &1900699448
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -474,14 +487,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f749206d6d5006e4293f96c5eea37534, type: 3}
---- !u!95 &5461390157205155964 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6222443829246054924, guid: f749206d6d5006e4293f96c5eea37534, type: 3}
-  m_PrefabInstance: {fileID: 2130289314726109808}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7535782517787519969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8431922257103522193, guid: f749206d6d5006e4293f96c5eea37534, type: 3}
+  m_PrefabInstance: {fileID: 2130289314726109808}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5461390157205155964 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6222443829246054924, guid: f749206d6d5006e4293f96c5eea37534, type: 3}
   m_PrefabInstance: {fileID: 2130289314726109808}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3142381950779867694
@@ -581,13 +594,13 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: d0a0a6bc9b8b26c4183401ac8c672029, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09e5637ac9d85fe46a0f59ed5691c5c8, type: 3}
---- !u!95 &4961712355190303504 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 8016531192773716286, guid: 09e5637ac9d85fe46a0f59ed5691c5c8, type: 3}
-  m_PrefabInstance: {fileID: 3142381950779867694}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4180310155489963053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1267915354533441027, guid: 09e5637ac9d85fe46a0f59ed5691c5c8, type: 3}
+  m_PrefabInstance: {fileID: 3142381950779867694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4961712355190303504 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8016531192773716286, guid: 09e5637ac9d85fe46a0f59ed5691c5c8, type: 3}
   m_PrefabInstance: {fileID: 3142381950779867694}
   m_PrefabAsset: {fileID: 0}

@@ -860,15 +860,15 @@ MonoBehaviour:
   _colorAboveTarget: {r: 0, g: 0.39215687, b: 0, a: 1}
   _colorBelowTarget: {r: 0.54509807, g: 0, b: 0, a: 1}
   _proportion: {fileID: 5692758604345311716}
-  _proportionFormat: <color=#{0}>{1}</color> dos alimentos coletados pertencem ao
-    grupo In Natura e Minimamente Processados
+  _proportionFormat: "<color=#{0}>{1}</color> dos alimentos coletados s\xE3o in natura
+    ou minimamente processados."
   _proportionNoFood: "Voc\xEA n\xE3o coletou nenhuma comida!"
   _feedback: {fileID: 7641003152195500901}
   _feedbackAboveTarget: "Parab\xE9ns! Voc\xEA coletou v\xE1rios alimentos saud\xE1veis
     e conseguiu manter sua alimenta\xE7\xE3o balanceada!"
-  _feedbackBelowTarget: "Sua dieta ficou desequilibrada! Tente novamente e colete
-    pelo menos <b>{0}</b> de alimentos In Natura ou Minimamente Processados para
-    manter a sa\xFAde em dia."
+  _feedbackBelowTarget: "Sua dieta ficou desequilibrada!\r\nTente novamente e colete
+    pelo menos <b>{0}</b> de alimentos in natura ou minimamente processados para
+    manter sua alimenta\xE7\xE3o saud\xE1vel."
   _feedbackNoFood: "Caso esteja com dificuldades para jogar, voc\xEA pode ler as
     instru\xE7\xF5es na Nutrip\xE9dia, acessada pelo Menu Principal."
 --- !u!225 &8823503328562580179
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

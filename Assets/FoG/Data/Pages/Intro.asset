@@ -12,25 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b95a242b13497c9e35cf5ce3cde06f, type: 3}
   m_Name: Intro
   m_EditorClassIdentifier: 
-  Title: "Introdu\xE7\xE3o"
-  LeftText: "O objetivo deste jogo \xE9 fazer o m\xE1ximo de pontos que conseguir
-    antes que o tempo acabe. \nVoc\xEA pode movimentar o personagem atrav\xE9s do
-    Joystick virtual (exibido ao clicar na tela e arrastar), ou utilizando as teclas
-    WASD do teclado.\nColete os alimentos que aparecem na tela ao movimentar seu
-    personagem atrav\xE9s deles. Por\xE9m, preste aten\xE7\xE3o: tente pegar apenas
-    os alimentos saud\xE1veis. \nPara descobrir mais sobre a classifica\xE7\xE3o
-    dos alimentos e seus impactos na pontua\xE7\xE3o, acesse os outros cap\xEDtulos
-    da Nutrip\xE9dia e n\xE3o deixe de clicar nos Post-its."
+  Title: COMO JOGAR
+  LeftText: "- <b>Objetivo do jogo</b>\nColetar os alimentos saud\xE1veis para ter
+    uma alimenta\xE7\xE3o adequada.\r\n- <b>Tutorial do jogo</b>\nAo passear pela
+    feira, colete os alimentos saud\xE1veis para fazer o m\xE1ximo de pontos, antes
+    que o tempo acabe, e tamb\xE9m escape dos alimentos n\xE3o saud\xE1veis. Assim
+    que o personagem tocar o alimento, ele vai para o carrinho de compras e quando
+    este estiver cheio, leve os alimentos coletados at\xE9 seu carro \u201CFusquinha
+    azul\u201D (localizado no canto inferior direito do cen\xE1rio). Uma seta vermelha
+    lhe ajudar\xE1 a encontrar o ponto de entrega.\r\n"
   PostIt:
     ButtonImage: {fileID: 0}
     Description: 
   FoodList: []
   FoodBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
-  RightText: "Conforme for coletando os alimentos, deve notar que seu carrinho vai
-    mudando para indicar sua capacidade. Quando estiver bem cheio voc\xEA poder\xE1
-    depositar as compras no fusca azul, localizado no canto inferior direito do mapa,
-    para receber mais pontos e aumentar seu tempo de jogo. Uma seta vermelha te ajudar\xE1
-    a encontrar o ponto de entrega.\n\n\nO conte\xFAdo deste jogo \xE9 baseado no
-    <link=\"https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_populacao_brasileira_2ed.pdf\"><color=#5284BD><b>Guia
+  RightText: "Voc\xEA pode movimentar o personagem para coletar os alimentos atrav\xE9s
+    do Joystick virtual (exibido ao clicar na tela e arrastar) ou utilizando as teclas
+    WASD do teclado.\r\nPara aprender mais sobre os alimentos, sua classifica\xE7\xE3o
+    e seus impactos na pontua\xE7\xE3o, acesse os outros cap\xEDtulos da Nutrip\xE9dia.\r\n\n\nO
+    conte\xFAdo do FeiraNutre \xE9 baseado no <link=\"https://bvsms.saude.gov.br/bvs/publicacoes/guia_alimentar_populacao_brasileira_2ed.pdf\"><color=#5284BD><b>Guia
     Alimentar para a Popula\xE7\xE3o Brasileira</b></color></link>, com o prop\xF3sito
     de promover alimenta\xE7\xE3o adequada, saud\xE1vel e sustent\xE1vel."
